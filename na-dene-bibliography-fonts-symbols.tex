@@ -1,0 +1,155 @@
+%!TEX root = ./na-dene-bibliography.tex
+%!TEX encoding = UTF-8 Unicode
+%%
+%% Font support for special symbols (e.g. math).
+%%
+
+% https://tex.stackexchange.com/questions/367773/command-textsuperscript-unavailable-in-encoding-tu?noredirect=1
+\DeclareTextSymbol{\texttilde} {TU} {"007E}
+
+%% Load the newunicodechar package.
+%%
+%% This package lets you define arbitrary macros to run for particular
+%% Unicode characters (or any character, really). This allows you to
+%% switch fonts per character, and thus use different fonts for e.g.
+%% mathematical symbols, Hebrew letters, etc. It should not be used
+%% for long stretches of text, which instead should be done with a
+%% specialized command or environment that changes the font in a
+%% more general way.
+%%
+%% All that the \newunicodechar command is really doing under the
+%% hood is something like plain TeX
+%%   \catcode`\X=\active
+%%   \defX{\textbf{\char"2323}}
+%% but it's much easier to use and so less error-prone.
+\usepackage{newunicodechar}
+
+%% This font is specifically for the check symbol that indicates
+%% grammaticality or felicity. The macro can be used in contexts
+%% where the character can't, with the same printed result. E.g.
+%% ExPex can use \ck to determine judgement width, but not ✓.
+%%
+%% NOTE: You need two braces here because of macro processing.
+%% You can also use \begingroup ... \endgroup. It's a TeX thing.
+\ProvideDocumentCommand \ck {} {{\ckfont ✓}}
+%% Two braces again, here and elsewhere below.
+\newunicodechar{✓}{{\ck}}
+
+%% This font is for the X symbol that contrasts with the check above.
+%% The same principles apply.
+%\newfontfamily{\badxfont}[Scale=1]{Zapf Dingbats}
+\newfontfamily{\badxfont}{Zapf Dingbats}
+\ProvideDocumentCommand \badx {} {{\badxfont ✓}}
+\newunicodechar{✗}{{\badxfont ✗}}
+
+%% The slashed zero as the null symbol.
+%% The macro is defined in crippenmacros.sty.
+\newunicodechar{∅}{{\nul}}
+
+%% The Brill font has Greek-style default versions of {β, θ, λ, χ} and
+%% Roman-style versions available with ss20. But I only want
+%% the roman θ and not the others. Brill 2.02 doesn’t implement
+%% character variant features (cvXX) for these, so the only way to access
+%% them is through ss20. I use newunicodechar to automatically add
+%% ss20 whenever θ appears.
+%%
+%% This solution completely ignores the current font. That means that ss20 will
+%% be applied in every situation, no matter what. So even if the font is no
+%% longer Brill for some reason, θ will still show up with ss20. It works fine if
+%% you’re consistent and careful, but it isn’t ideal. cvXX would be ideal.
+\newunicodechar{θ}{{\addfontfeature{StylisticSet=20}θ}}
+
+%% Mathematical symbols.
+%%
+%% If you have things with diacritics (e.g. math negation) then if
+%% these are decomposed (NFD) it will make TeX barf. YHBW.
+%%
+%% The double braces are on purpose, with the inner pair
+%% restricting the scope of the font switching commands.
+%%
+%% FIXME: This should be in an array with a loop instantiating each
+%% character, rather than repeating the same code over and over again.
+%% It wouldn't make it any more efficient, but it'd be easier to modify.
+%% Actually it would be a couple array+loops, one for each font.
+
+%% Set stuff.
+\newunicodechar{∈}{{\mthfont ∈}}	% element
+\newunicodechar{∉}{{\mthfont ∉}}	% not element
+\newunicodechar{⊂}{{\mthfont ⊂}}	% proper subset
+\newunicodechar{⊃}{{\mthfont ⊃}}	% proper superset
+\newunicodechar{⊆}{{\mthfont ⊆}}	% total subset
+\newunicodechar{⊇}{{\mthfont ⊇}}	% total superset
+\newunicodechar{⊊}{{\mthfont ⊊}}	% nontotal subset
+\newunicodechar{⊋}{{\mthfont ⊋}}	% nontotal superset
+\newunicodechar{⊈}{{\mthfont ⊈}}	% not total subset
+\newunicodechar{⊉}{{\mthfont ⊉}}	% not total superset
+\newunicodechar{∪}{{\mthfont ∪}}	% union
+\newunicodechar{∩}{{\mthfont ∩}}	% intersection
+\newunicodechar{⋃}{{\mthfont ⋃}}	% big union
+
+%% Logic and quantification.
+\newunicodechar{≡}{{\mthfont ≡}}	% triple equals
+\newunicodechar{≢}{{\mthfont ≢}}	% triple not equals
+\newunicodechar{≅}{{\mthfont ≅}}	% triple approximately equals
+\newunicodechar{∧}{{\mthfont ∧}}	% logical and
+\newunicodechar{∨}{{\mthfont ∨}}	% logical or
+\newunicodechar{∀}{{\mthfont ∀}}	% for all
+\newunicodechar{∃}{{\mthfont ∃}}	% exists
+\newunicodechar{∄}{{\mthfont ∄}}	% not exists
+
+%% Orderings.
+\newunicodechar{⊤}{{\mthfont ⊤}}	% supremum, top
+\newunicodechar{⊥}{{\mthfont ⊥}}	% infimum, bottom
+\newunicodechar{⊑}{{\mthfont ⊑}}	% precedes
+\newunicodechar{⊒}{{\mthfont ⊒}}	% succedes
+\newunicodechar{⊏}{{\mthfont ⊏}}	% strictly precedes
+\newunicodechar{⊐}{{\mthfont ⊐}}	% strictly succedes
+\newunicodechar{⋢}{{\mthfont ⋢}}	% not succeeds
+\newunicodechar{≪}{{\mthfont ≪}}	% much less than
+\newunicodechar{≫}{{\mthfont ≫}}	% much greater than
+\newunicodechar{≶}{{\mthfont ≶}}	% less than over greater than
+\newunicodechar{≷}{{\mthfont ≷}}	% greater than over less than
+\newunicodechar{≸}{{\mthfont ≹}}	% neither less than nor greater than
+\newunicodechar{≹}{{\mthfont ≹}}	% neither greater than nor less than
+\newunicodechar{≼}{{\mthfont ≼}}	% curved precedes
+\newunicodechar{≽}{{\mthfont ≽}}	% curved succedes
+\newunicodechar{≺}{{\mthfont ≺}}	% curved strictly precedes
+\newunicodechar{≻}{{\mthfont ≻}}	% curved strictly succedes
+\newunicodechar{⊀}{{\mthfont ⊀}}	% not curved strictly succeeds
+
+%% Arrows.
+\newunicodechar{⇒}{{\mthfont ⇒}} % double east arrow
+\newunicodechar{⇐}{{\mthfont ⇐}} % double west arrow
+\newunicodechar{⇔}{{\mthfont ⇔}} % double east-west arrow
+\newunicodechar{⇏}{{\mthfont ⇏}} % not double east arrow
+\newunicodechar{⇍}{{\mthfont ⇍}} % not double west arrow
+\newunicodechar{⇎}{{\mthfont ⇎}} % not double east-west arrow
+\newunicodechar{↦}{{\mthfont ↦}} % maps to
+\newunicodechar{↤}{{\mthfont ↤}} % maps from
+\newunicodechar{⤵}{{\mthfont \raisebox{-0.5ex}{⤵}}} % right curve downwards arrow
+
+%% Calligraphic script letters.
+\newunicodechar{𝒞}{{\mthcalfont 𝒞}}	% script capital C
+\newunicodechar{ℰ}{{\mthcalfont ℰ}}	% script capital E
+\newunicodechar{𝒬}{{\mthcalfont 𝒬}}	% script capital Q
+\newunicodechar{ℛ}{{\mthcalfont ℛ}}	% script capital R
+
+%% Phonetic stuff.
+\newunicodechar{ᵒ}{{\phonfont ᵒ}}	% superscript o
+\newunicodechar{ᵏ}{{\phonfont ᵏ}}	% superscript k
+\newunicodechar{ᵘ}{{\phonfont ᵘ}}	% superscript u
+\newunicodechar{ᵉ}{{\phonfont ᵉ}}	% superscript e
+\newunicodechar{ᵗ}{{\phonfont ᵗ}}	% superscript t
+\newunicodechar{ꜝ}{{\phonfont ꜝ}}	% superscript !
+\newunicodechar{ꜜ}{{\phonfont ꜜ}}	% superscript down arrow
+\newunicodechar{ꜛ}{{\phonfont ꜛ}}	% superscript up arrow
+\newunicodechar{ₚ}{{\phonfont ₚ}}	% subscript p
+\newunicodechar{ᴴ}{{\phonfont ᴴ}}	% superscript capital H
+
+%% Miscellanea.
+%\newunicodechar{𝑣}{{\mthfont 𝑣}}
+\newunicodechar{¬}{{\mthfont ¬}}	% not: Brill has this but it’s too low
+\newunicodechar{⋮}{{\mthfont ⋮}}	% vertical ellipsis
+\newunicodechar{ℓ}{{\mthfont ℓ}}	% script small l
+\newunicodechar{⊗}{{\upshape\mthfont ⊗}}	% circle times
+\newunicodechar{⬚}{{\symfont ⬚}}	% dotted box

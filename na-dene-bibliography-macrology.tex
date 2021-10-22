@@ -1,0 +1,120 @@
+%!TEX root = ./na-dene-bibliography.tex
+%%
+%% Miscellaneous macrology.
+%%
+
+%% This is a general collection of personal macros.
+%% Several things below are derived from this package.
+%% The date ensures that any versions before that date
+%% will trigger a warning.
+\usepackage{crippenmacros}[2017/04/24]
+
+%% Set up TikZ example arrows.
+\tikzexstylesetup
+\tikzset{exarrows/.style={semithick, arrows = {-Stealth[scale=0.75]}}}
+\tikzset{exarrowsagr/.style={thin, double, arrows = {-Stealth[width=6pt, open, scale=1]}}}
+
+%% Move arrow style.
+\tikzset{mvarrows/.style={semithick, arrows = -{Stealth[scale=1, scale length=1, scale width=1}}}
+
+%% Agree arrow style.
+\tikzset{agrarrows/.style={semithick, arrows = {Circle[open]}-{Circle[open]}}}
+
+%% Tree style.
+\tikzset{mytree/.style={align=center,
+		anchor=north,
+		parent anchor=south,
+		child anchor=north,
+		level distance=2em,
+		sibling distance=4em}}
+
+%% Interrupted tree branch style for 2em level distance.
+\tikzset{dashbranch2em/.style={dash pattern={on 0.75em
+										off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt
+									on 0.75em}}}
+
+%% Settings for the \gm gloss emphasis macro.
+%%
+%% Bold text.
+\gmboldoff
+%% Foreground colour.
+\gmcoloroff
+%% Background shading.
+\gmbgcoloron
+%% Adjust the two colours.
+\gmcolorset{0.66,0,0}
+\gmbgcolorset{0.9,0.9,0.9}
+
+%% The Brill font doesn’t need its roots kerned.
+\setlength{\rtkern}{0pt}
+%% It also needs a wider underscore.
+\setlength{\uscorewidth}{0.875em}
+
+%% Use real double brackets for fixme comments.
+\renewcommand*{\dblbrackleft}{⟦}
+\renewcommand*{\dblbrackright}{⟧}
+
+%% This is a small strut for table row spacing. It ensures enough space for
+%% superpositioned and subpositioned diacritics, but doesn't extend as
+%% much as a regular \strut. It has zero width like \strut.
+\ProvideDocumentCommand \smstrut {} {\vphantom{V̈́V̨}}
+
+%% Example contexts.
+\ProvideDocumentCommand \excontext { m } {\textsc{Context:} #1}
+
+%% Phantom (invisible) hyphens for alignment in examples.
+\ProvideDocumentCommand \· {} {\phantom{-}}
+
+%% Phantom (invisible) equals signs for alignment in examples.
+\ProvideDocumentCommand \• {} {\phantom{=}}
+
+%% Stigmata macros.
+\ProvideDocumentCommand \† {} {\llap{\textsuperscript*{†}}}
+
+%% A feature.
+\ProvideDocumentCommand \ftr { m } {[#1]}
+
+%% Command to force lining numerals instead of old style.
+\ProvideDocumentCommand \liningnumerals {m}
+	{\begingroup\addfontfeatures{Letters=Uppercase,Numbers=Lining}#1\endgroup}
+
+%% Second language abbreviation.
+\ProvideDocumentCommand \Lone {} {\liningnumerals{L1}}
+\ProvideDocumentCommand \Ltwo {} {\liningnumerals{L2}}
+
+%% Orthography abbreviation.
+\ProvideDocumentCommand \NSone {} {\liningnumerals{NS1}}
+\ProvideDocumentCommand \NStwo {} {\liningnumerals{NS2}}
+
+%% Fundamental frequency.
+\ProvideDocumentCommand \Fzero {} {\textit{f₀}}
+
+%% Root as a symbol.
+%%
+%% This smashes the root into a 1em vertical box, adding slight whitespace on the right.
+\ProvideDocumentCommand \rtsym {} {\raisebox{0pt}[0.75em][0.25em]{√\!}}
+
+%% Empty spacing for gloss abbreviation (\glc) line.
+\DeclareDocumentCommand {\glcsp} {s}
+	{\hspace{1em}\IfBooleanTF{#1}{\hspace{1em}}}
+
+%% Fake spacing for gloss text line (\gla), using ExPex’s length.
+\DeclareDocumentCommand {\glasp} {} {\hspace\lingglspace}
+
+%% Verb lexical entry.
+\ProvideDocumentCommand \vblex { m m m m }
+	{\IfNoValueOrEmptyTF{#1}{}{\fm{#1} }(\IfNoValueOrEmptyTF{#2}{}{\fm{#2}; }#3) ‘#4’}
+
+%% Verb lexical entry in examples.
+\ProvideDocumentCommand \exvblex { s m m m m }
+	{\IfBooleanTF{#1}{}{\newline}\footnotesize\vblex{#2}{#3}{#4}{#5}\normalsize}
+
+%% Binominal species names.
+\ProvideDocumentCommand \species { s m m o} 
+	{\textit{#2}~\textit{#3}\IfNoValueOrEmptyTF{#4}{}{~\IfNoValueTF{#1}{(}{}#4\IfNoValueTF{#1}{)}{}}}
+
+%% Some memoir configuration for marginal notes.
+\marginparmargin{right}
+\setmarginnotes{1ex}{4em}{0.5ex}
+%% Margin note for example number.
+\DeclareDocumentCommand {\exmn} {m} {\marginpar{\footnotesize{}(#1)}}

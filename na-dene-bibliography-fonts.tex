@@ -1,0 +1,84 @@
+%!TEX root = ./na-dene-bibliography.tex
+%!TEX encoding = UTF-8 Unicode
+%%%
+%%% Fonts and symbols.
+%%%
+
+%% XeLaTeX font support.
+\usepackage{fontspec}
+\usepackage{xltxtra}
+
+%% The base font from which most other fonts are derived.
+\newcommand{\basefont}{Brill}
+
+%% The essential font definitions.
+\setmainfont{\basefont}
+\defaultfontfeatures{Scale=MatchLowercase}
+\setsansfont[LetterSpace=-0.1]{Calibri}
+\setmonofont[FakeStretch=0.9]{Consolas}
+
+%% Page headers and footers.
+\newfontfamily\pageheadfont{\basefont}
+\newfontfamily\pagefootfont{\basefont}
+
+%%
+%% Transformations of the base font.
+%%
+
+%% Gloss abbreviations.
+%%
+%% Artificially condensed to take up less space.
+\newfontfamily{\glossfont}[FakeStretch=0.9]{\basefont}
+
+%% Table labels.
+%%
+%% Artificially condensed to take up less space.
+\newfontfamily{\condensed}[FakeStretch=0.94]{\basefont}
+\newfontface{\cond}[FakeStretch=0.94]{\basefont}
+\newfontface{\condital}[FakeStretch=0.94]{Brill Italic}
+%\newfontface{\condbold}[FakeStretch=0.94,Numbers=OldStyle]{Cambria Bold}
+
+%%
+%% Special fonts.
+%%
+
+%% Some of these font definitions are used by stuff in the
+%% ...-fonts-symbols.tex file that gets loaded after
+%% this file.
+
+%% The check mark symbol for judgements.
+\newfontfamily{\ckfont}{Lucida Grande}
+
+%% This font is specifically for the slashed zero as the null symbol.
+%% It is expected to be defined by crippenmacros.sty as well as
+%% ...-fonts-symbols.tex.
+\newfontfamily{\zerofont}[Numbers=SlashedZero]{Minion Pro}
+
+%% Phonetics.
+%\newfontfamily{\ipafont}{Charis SIL}
+%\newfontfamily{\ipafont}{Doulos SIL}
+\newfontfamily{\ipafont}{\basefont}
+\newfontfamily{\ipaspecialfont}{Doulos SIL}
+
+%% This font is for unusual phonetic symbols.
+\newfontfamily{\phonfont}{Charis SIL Compact}
+
+%% This font is for mathematical symbols.
+%%
+%% Don't call it \mathfont because other packages use that name.
+%% You have been warned.
+%\newfontfamily{\mthfont}{Cambria Math}
+%\newfontfamily{\mthfont}{STIX}
+\newfontfamily{\mthfont}{Asana Math}
+
+%% This font is for calligraphic script math symbols.
+\newfontfamily{\mthcalfont}{XITS Math}
+
+%% This font is for other symbols.
+\newfontfamily{\symfont}{Apple Symbols}
+
+%% This font is for emoji!
+\newfontfamily{\emojifont}{Symbola}
+
+%% Chinese.
+\newfontfamily{\cnfont}{KaiTi}

@@ -1,0 +1,221 @@
+%!TEX root = ./na-dene-bibliography.tex
+%!TEX encoding = UTF-8 Unicode
+%%%
+%%% Memoir configuration.
+%%%
+
+%%
+%% Page layout.
+%%
+
+%% We will assume that the trimmed paper size is set by the class option [letterpaper].
+%% If not, the following commands are necessary.
+%\setstocksize{11in}{8.5in}
+%\settrimmedsize{\stockheight}{\stockwidth}{*}
+
+%% The size of the left and right margins, calculating the typeblock width automatically.
+%%   Sets \spinemargin and \foremargin.
+\setlrmarginsandblock{1.25in}{*}{*}
+
+%% The size of the upper and lower margins, calculating the typeblock height automatically.
+%%   Sets \uppermargin and \lowermargin.
+\setulmarginsandblock{1.25in}{*}{*}
+
+%% The distance of the header and footer from the typeblock edges.
+%%   Sets \headheight and \footskip.
+%%   Usually set based on \baselineskip multiples, but Memoir offers the constant value \onelineskip.
+%%   Args: {<header>}{<footer>}
+\setheadfoot{2\onelineskip}{2\onelineskip}
+
+%% Amount of space to use in the upper and lower margins for the header and footer.
+%%   Sets \headsep and footsep.
+\setheaderspaces{*}{0.5in}{*}
+
+%% Verify and apply the calculations.
+\checkandfixthelayout
+
+%%
+%% Page style.
+%%
+
+%% The ‘mine’ page style is my default.
+\copypagestyle{mine}{plain}
+
+%% The psmarks are the marks that go in the header and footer. They are used to produce the
+%% \leftmark and \rightmark macros. When a sectioning macro is used in the body, the
+%% appropriate psmark is updated using these definitions below.
+\makepsmarks{mine}{%
+	\nouppercaseheads
+	\createmark{chapter}{both}{nonumber}{}{}
+	\createmark{section}{both}{shownumber}{}{. \space}
+	\createmark{subsection}{both}{shownumber}{}{. \space}
+	\createmark{subsubsection}{both}{shownumber}{}{. \space}
+	\createmark{paragraph}{both}{shownumber}{}{. \space}
+	\createplainmark{toc}{both}{\contentsname}
+	\createplainmark{lof}{both}{\listfigurename}
+	\createplainmark{lot}{both}{\listtablename}
+	\createplainmark{bib}{both}{\bibname}
+	\createplainmark{index}{both}{\indexname}
+	\createplainmark{glossary}{both}{\glossaryname}}
+
+%% How the heads should be formatted. The contents come from the \leftmark and \rightmark
+%% macros produced automagically from the psmarks defined above.
+%%   Args: {<pagestyle>}{<left>}{<centre>}{<right>}
+\makeevenhead{mine}{\normalfont\itshape\leftmark}{}{}
+\makeoddhead{mine}{}{}{\normalfont\itshape\rightmark}
+
+%% How the feet should be formatted.
+%%   Args: {<pagestyle>}{<left>}{<centre>}{<right>}
+\makeevenfoot{mine}{}{\thepage}{}
+\makeoddfoot{mine}{}{\thepage}{}
+
+%% The the rule separating the footer from the body. Use a thickness of 0pt for no rule.
+%%   Args: {<pagestyle>}{<span>}{<thickness>}
+\makeheadrule{mine}{\textwidth}{0pt}
+
+%%
+%% Section heading style.
+%%
+
+%% The font for section headings.
+\newcommand{\secstylefont}{\normalfont}
+
+%% The style for section headings.
+\setsecheadstyle{\secstylefont\Large\raggedright}
+\setsubsecheadstyle{\secstylefont\large\raggedright}
+\setsubsubsecheadstyle{\secstylefont\bfseries\normalsize\raggedright}
+
+%% Skip space before section heading. Negative values prevent indentation.
+\setbeforesecskip{-1ex plus -0.25ex minus -0.25ex}
+\setbeforesubsecskip{-1ex plus -0.25ex minus -0.25ex}
+\setbeforesubsubsecskip{-1ex plus -0.25ex minus -0.25ex}
+
+%% Skip space after section heading. Negative values cause runin with following text.
+\setaftersecskip{1ex plus 0.25ex minus 0.25ex}
+\setaftersubsecskip{1ex plus 0.25ex minus 0.25ex}
+\setaftersubsubsecskip{1ex plus 0.25ex minus 0.25ex}
+
+%% The same for paragraphs and subparagraphs.
+\setparaheadstyle{\normalfont\normalsize\bfseries\raggedright}
+\setbeforeparaskip{-1ex plus -0.25ex minus -0.25ex}
+\setafterparaskip{1ex plus 0.25ex minus 0.25ex}
+\setparaindent{0pt}
+
+\setsubparaheadstyle{\normalfont\normalsize\bfseries\raggedright}
+\setbeforesubparaskip{-1ex plus -0.25ex minus -0.25ex}
+\setaftersubparaskip{1ex plus 0.25ex minus 0.25ex}
+\setsubparaindent{0pt}
+
+%% Number headings all the way down to subparagraphs.
+\setsecnumdepth{all}
+\maxsecnumdepth{all}
+
+%% Formatting of the heading number. Same for all headings.
+%%   Uses “\the<secname>” via macro trickery.
+\setsecnumformat{\csname the#1\endcsname.\quad}
+
+%% Whether to include chapter numbers in sections.
+%\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\renewcommand{\thesection}{\arabic{section}}
+
+%%
+%% Footnote style.
+%%
+
+\feetbelowfloat
+\footmarkstyle{#1.\hfill}
+\setlength{\footnotesep}{0.6\baselineskip}
+\setlength{\footmarkwidth}{1.5em}
+\setlength{\footmarksep}{0pt}
+\setlength{\footparindent}{0pt}
+\renewcommand*{\foottextfont}{\footnotesize}
+\renewcommand*{\makefootmarkhook}{}
+\renewcommand*{\footfudgefiddle}{64}
+
+%% Also copy this for the thanks footnote.
+\thanksmarkstyle{#1\hfill}
+\setlength{\thanksmarkwidth}{1.5em}
+\setlength{\thanksmarksep}{0pt}
+
+%%
+%% Table of contents, List of figures, List of tables (cft).
+%%
+
+%% Depth of ToC listing.
+\maxtocdepth{subparagraph}
+
+%% Dot to use in leaders.
+\renewcommand{\cftdot}{·}
+
+%% Width of page number box.
+\setpnumwidth{2.5em}
+
+%% Width of right margin, includes page number box.
+\setrmarg{3.5em}
+
+%% Indentation before various types of entries.
+\setlength{\cftchapterindent}{0ex}
+\setlength{\cftsectionindent}{0ex}
+%% FIXME: How could this stuff be automatically calculated??
+\setlength{\cftsubsectionindent}{2.7em}
+\setlength{\cftsubsubsectionindent}{6.5em}
+\setlength{\cftparagraphindent}{11.3em}
+\setlength{\cftsubparagraphindent}{17.3em}
+
+%%
+%% Miscellany.
+%%
+
+%% Line (interlinear) spacing.
+%%
+%% To quote Peter Wilson, “Some of those that have control over the visual appearance of
+%% academic theses like them to be ‘double spaced’. This, of course, will make the thesis harder
+%% to read but perhaps that is the purpose, or maybe they have stock (shares) in papermills and
+%% lumber companies, as the theses were usually required to be printed single sided as well.”
+%% (Wilson & Madsen 2013/05/22: 48)
+%%
+%% \OneHalfSpacing does what most people want. \DoubleSpacing actually doubles but is
+%% usually way too large. These don’t modify footnotes and floats, for which add a * to the end.
+%\OneHalfSpacing
+%\DoubleSpacing
+\SingleSpacing
+%% This modifies the actual multiplier for single spacing, which is 1 by default.
+%\setSingleSpace{1}
+%% To control footnote and float spacing directly, use these macros. Argument is a multiplier.
+%\setPagenoteSpacing{1}
+%\setFloatSpacing{1}
+%% There are also environments for temporary control.
+%% \begin{SingleSpace}...\end{SingleSpace}
+%% \begin{Spacing}{<factor>}...\end{Spacing{<factor>}
+%% \begin{OneHalfSpace}...\end{OneHalfSpace}
+%% \begin{OneHalfSpace*}...\end{OneHalfSpace*}
+%% \begin{DoubleSpace}...\end{DoubleSpace}
+%% \begin{DoubleSpace*}...\end{DoubleSpace*}
+
+%% Paragraph indentation.
+%%
+%% The Memoir class sets this to different values depending on the body typeface size and
+%% also the number of columns per page. Usually this should be around 1em or 1.5em,
+%% depending on the design of the typeface (narrowness of the em square, etc.).
+\setlength{\parindent}{1.5em}
+
+%% Allow the occasional empty line at the bottom of a page. This is necessary because
+%% examples prevent LaTeX from fitting to the typeblock consistently.
+\raggedbottom
+
+%% Typeset short pages as ragged bottom when section headings are moved to the next page.
+%% This permits chunks of empty space at the bottom so headings can start on new pages.
+\raggedbottomsection
+
+%% Interword spacing and justification.
+%% Options are \fussy, \midsloppy, \sloppy. The LaTeX default is \fussy.
+%% There are environments too: \begin{sloppypar}...\end{sloppypar}
+%% and \begin{midsloppypar}...\end{midsloppypar}. None for fussy though.
+\midsloppy
+
+%% Tightening list spacing. Tightest is \tightlists, somewhat tight is \firmlists,
+%% and normal is \defaultlists. Starred \firmlists* allows less space when
+%% the list is preceded by a blank line.
+%%
+%% See also \zerotrivseps, \savetrivseps, and \restoretrivseps for trivlists.
+\tightlists

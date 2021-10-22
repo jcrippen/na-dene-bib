@@ -1,0 +1,3231 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% The cruft above tells TeX editors (e.g. TeXShop) what this file contains.
+
+%% Only tested with XeLaTeX.
+%\RequireXeTeX
+
+%% Unicode normalization of input text.
+%%  0: no normalization (default)
+%%  1: normalize to NFC
+%%  2: normalize to NFD
+\XeTeXinputnormalization 1
+
+%% FIle prefix.
+%% This is the unchanging part of all file names for this document.
+\def \FILEPREFIX {na-dene-bibliography}
+
+%% The Memoir class.
+%% The manual is memman.pdf.
+\documentclass[12pt,letterpaper,oneside,article]{memoir}
+
+%% LaTeX3 command parsing.
+%% Should be used by all modern, right thinking LaTeX programmers.
+\usepackage{xparse}
+
+%%%
+%%% Memoir configuration.
+%%%
+
+\input{\FILEPREFIX-memconf}
+
+%%%
+%%% Font configuration.
+%%%
+
+\input{\FILEPREFIX-fonts}
+\input{\FILEPREFIX-fonts-symbols}
+
+%%%
+%%% Bibliography configuration.
+%%%
+
+\input{\FILEPREFIX-bib}
+
+%%%
+%%% Example and glossing configuration.
+%%%
+
+\input{\FILEPREFIX-expex}
+
+%%%
+%%% Other packages.
+%%%
+\input{\FILEPREFIX-other}
+
+%%%
+%%% Hyperlinks and crossreferences.
+%%%
+
+\input{\FILEPREFIX-hyper}
+
+%%%
+%%% Miscellaneous macrology.
+%%%
+
+\input{\FILEPREFIX-macrology}
+
+\ProvideDocumentCommand \ANLAlink {m}
+	{\href{https://www.uaf.edu/anla/record.php?identifier=#1}{#1}}
+
+\ProvideDocumentCommand \LingBuzzlink {m}
+	{\href{https://ling.auf.net/lingbuzz/#1}{#1}}
+
+\ProvideDocumentCommand \ArchiveOrglink {m}
+	{\href{http://www.archive.org/details/#1}{#1}}
+
+\ProvideDocumentCommand \JSTORlink {m}
+	{\href{http://www.jstor.org/stable/#1}{#1}}
+
+\ProvideDocumentCommand \MUSElink {m}
+	{\href{https://muse.jhu.edu/#1}{#1}}
+
+\ProvideDocumentCommand \DOIlink {m}
+	{\href{http://dx.doi.org/#1}{#1}}
+
+\ProvideDocumentCommand \HDLlink {m}
+	{\href{http://hdl.handle.net/#1}{#1}}
+
+\ProvideDocumentCommand \SOVAlink {m}
+	{\href{https://sova.si.edu/record/#1}{#1}}
+
+\ProvideDocumentCommand \Vildalink {m}
+	{\href{http://vilda.alaska.edu/cdm/ref/collection/cdmg21/id/#1}{#1}}
+
+\hyphenation{Ath-a-bas-k-an}
+
+%%%
+%%% The document.
+%%%
+\begin{document}
+
+\title{Annotated bibliography of Na-Dene languages}
+\author{James A.\ Crippen}
+
+\maketitle
+
+\tableofcontents
+
+\setcounter{section}{-1}
+\section{Introduction}\label{sec:intro}
+
+This is an annotated bibliography of linguistic materials on Na-Dene languages.%
+\footnote{The definition of Na-Dene used here includes Tlingit and Eyak alongside the Dene (Athabaskan) languages and specifically excludes Haida.
+Some materials in this bibliography do include Haida, however.}
+This bibliography focuses specifically on grammatical, lexical, and narrative documentation.
+Descriptive grammars, dictionaries, and text collections are emphasized, though some other academic publications (e.g.\ journal articles, dissertations) are included depending on the language and topic.
+For languages with less documentation, more specific materials have been included since these provide data that may otherwise not be accessible.
+In a few cases it is possible to list most or all of the available material on a language, in which case this is explicitly mentioned.
+Archive materials are included only where they are easily accessible, as for example the large inventory of digitized documents in the Alaska Native Language Archive and the National Anthropological Archives.
+
+Most materials included in this bibliography have been published though a number of unpublished manuscripts (e.g.\ dissertations, unpublished typescripts, large notes collections) are also included.
+Materials that are held in the U.S.\ Library of Congress or other major North American libraries give their Library of Congress Card Catalog number (\textsc{lcccn}).
+An International Standard Book Number (\textsc{isbn}) is also listed if one exists; if a publication has more than one \textsc{isbn} then only the hardcover or library binding is given.
+Links to digital versions are given when available, including links to the Alaska Native Language Archive (\textsc{anla}), Digital Object Identifiers (\textsc{doi}), Handle.net (\textsc{hdl}), \textsc{Jstor}, Project MUSE, HathiTrust, Archive.org, and LingBuzz.
+
+The bibliography is organized according to conventional divisions between groups of languages within the Na-Dene family.
+These groups are mostly reflect geography rather than shared genealogical relationships.
+The organization of languages given here should not be taken as any statement of subgrouping or other historical relations.
+Some few entries are duplicated between groups because of their documentary significance for multiple languages when they do not fit into a single particular grouping.
+
+Entries in each section are given in chronological order by year, with entries in the same year sorted by author last name.
+Entries with the same year and name are given in order by title with an additional lowercase letter appended to the year, e.g.\ “1965a” for the second of two publications by the same author(s) in 1965.
+The order for such entries depends on whether they are journal articles or not.
+If there are multiple journal articles then they are given in order of publication by the journal according to their issue and page numbers.
+Otherwise such entries are ordered alphabetically by title.
+
+\subsection*{Abbreviations}
+\begin{multicols}{2}\small\raggedyright
+\begin{description}
+	[font=\normalfont,
+	leftmargin=3.5em,
+	style=sameline,
+	partopsep=0pt,
+	parsep=0pt,
+	itemsep=0pt]
+\item[ANLA]		Alaska Native Language Archive
+\item[ANLC]		Alaska Native Language Center
+\item[DOI]		Digital Object Identifier
+\item[HDL]		Handle.net identifier
+\item[IJAL]		Int’l Journal of American Linguistics
+\item[ISBN]		Int’l Standard Book Number
+\item[JAC]		James A.~Crippen (author)
+\item[JSTOR]		\textsc{Jstor} digital library
+\item[LCCCN]		Library of Congress Card Catalog Number
+\item[NAA]		National Anthropological Archives
+\item[p.c.]		personal communication
+\item[PD]		Proto-Dene (= Proto-Athabaskan)
+\item[PDE]		Proto-Dene-Eyak (= Proto-Ath.-Eyak)
+\item[PND]		Proto-Na-Dene (= Proto-Ath.-Eyak-Tlingit)
+\item[YNLC]		Yukon Native Language Centre
+\end{description}
+\end{multicols}
+
+%%%
+%%% Comparative and historical
+%%%
+\section{Comparative and historical Dene and Na-Dene}\label{sec:comphist}
+
+The publications in this section specifically address multiple languages across the Na-Dene family.
+This section is divided into four subsections:
+\ref{sec:comphist-sum} for family summaries and bibliographies,
+\ref{sec:comphist-edvol} for edited volumes that contain papers on different Dene languages,
+\ref{sec:comphist-comp} for structural comparisons between languages without explicit historical reconstruction,
+and \ref{sec:comphist-hist} for explicitly historical work involving the reconstruction of proto-languages.
+Most of the publications in this section are articles or papers rather than monographs or other book-length materials.
+
+\subsection{Family summaries and bibliographies}\label{sec:comphist-sum}
+
+This section lists papers that summarize linguistic phenomena across the family or a major portion of the family, as well as bibliographies of materials on languages in the family.
+Also included here are a few papers that detail the history of research on the family since these also function as bibliographies.
+
+\begin{enumerate}
+\item	Pilling, James R.
+	1892.
+	\textit{Bibliography of the Athapascan languages}.
+	xiii + 125.
+	(Bulletins of the Smithsonian Institution Bureau of American Ethnology no.\ 14).
+	Washington DC: U.S.\ Gov’t Printing Office.
+	\textsc{lcccn} E51.U6 no.\ 14.
+	\textsc{hdl} \HDLlink{10088/34567}.
+	\begin{itemize}
+	\item	Bibliography of 19th century and earlier works on Dene languages.
+		Some entries include annotations and occasional quotations, with a few
+		whole page reproductions.
+		Primarily of historical interest, but notable for its depth of coverage
+		for many otherwise forgotten publications.
+	\end{itemize}
+\item	Krauss, Michael E.
+	1973.
+	Na-Dene.
+	In \textit{Linguistics in North America},
+	Thomas A. Sebeok (ed.), pp.\ 903–978.
+	75 pp.
+	(Current trends in linguistics vol.\ 10).
+	The Hague: Mouton de Gruyter.
+	\textsc{lcccn} P25.S4 vol.\ 10.
+	\textsc{anla} \ANLAlink{CA961K1973}.
+	\begin{itemize}
+	\item	Detailed documentary history and demographics of Na-Dene languages.
+		Extensive notes on geographic locations and varieties, population
+		figures, and sources.
+		Includes Haida as well as Eyak and Tlingit.
+		Scattered phonological and morphological comments.
+		Ends (pp.\ 939–965) with review of comparative and historical
+		reconstruction including summaries of individual publications.
+	\end{itemize}
+\item	Parr, Richard T.
+	1974.
+	\textit{A bibliography of the Athapaskan languages}.
+	xiii + 333 pp.
+	(Mercury Series, Ethnology Division Papers no.\ 14).
+	Ottawa: National Museum of Man.
+	\textsc{lcccn} PM641.P377 1974.
+	\begin{itemize}
+	\item	Bibliography of about 5000 entries, no annotations or summaries.
+		Organized by subgroup and language and then by topic for large sections.
+		Includes articles, books, maps, and unpublished archive materials
+		in the National Museum of Canada, Smithsonian, and other institutions.
+		A section on Na-Dene is primarily comparative-historical but also
+		contains a few specific works on Eyak, Tlingit, and Haida.
+		Presented as a successor to James R.\ Pilling’s
+		\textit{Bibliography of the Athapascan Languages} (1892).
+	\end{itemize}
+\item	Krauss, Michael E.
+	1979.
+	Na-Dene and Eskimo-Aleut.
+	In \textit{The languages of Native America: Historical and comparative assessment},
+	Lyle Campbell \& Marianne Mithun (eds.), pp.\ 803–901;
+	Na-Dene on pp.\ 838–901.
+	52 pp.\ + 10 pp.\ endnotes.
+	Austin: University of Texas Press.
+	\textsc{isbn} 0-292-74624-5.
+	\textsc{lcccn} PM108.L35.
+	\textsc{anla} \ANLAlink{CA961KG1981}.
+	\begin{itemize}
+	\item	Different from Krauss 1973, though similar.
+		Detailed documentary history and demographics of Na-Dene languages.
+		Includes Haida as well as Eyak and Tlingit.
+		Also includes short discussion of Nicola and Kwalihioqua-Tlatskanai.
+		Scattered phonological and morphological comments.
+		Ends with review of comparative and historical reconstruction work
+		since Krauss 1973.
+	\end{itemize}
+\item	Krauss, Michael E. \&\ McGary, Mary Jane.
+	1980.
+	\textit{Alaska Native languages: A bibliographical catalogue, part 1: Indian languages}.
+	vi + 455 pp.
+	(\textsc{anlc} research papers no.\ 3).
+	Fairbanks: \textsc{anlc}.
+	\textsc{anla} \ANLAlink{B973KM1980}.
+	\begin{itemize}
+	\item	Bibliography and catalogue of materials on Na-Dene languages, Haida, and
+		Tsimshianic languages held at the Alaska Native Language Center.
+		Organized by \textsc{anla} catalogue system, including by language.
+		Mostly images of individual cards from the card catalogue which include
+		short descriptions and summaries.
+		Also some discussions for individual languages.
+	\end{itemize}
+\item	Krauss, Michael E.
+	1981.
+	\textit{On the history and use of Comparative Athabaskan linguistics}.
+	76 pp.
+	Unpublished typescript.
+	Fairbanks: \textsc{anlc}.
+	\textsc{anla} \ANLAlink{CA961K1981}.
+	\begin{itemize}
+	\item	Historical review of research on Dene and Na-Dene languages, primarily
+		sourced from archive materials and private correspondence.
+		Begins with short discussion of language comparison by native speakers
+		(ethnolinguistics) and conscious awareness of sound correspondences.
+		Covers period from 1740–1980 though primarily 1860–1960.
+		Discusses development of hypotheses and analyses and charts personal
+		interactions (including some gossip) between major figures like Goddard,
+		Morice, Boas, Sapir, Li, Harrington, Hoijer, and Reichard.
+		Complemented by Krauss 1986 specifically on Sapir.
+	\end{itemize}
+\item	Krauss, Michael E. \& Golla, Victor.
+	1981.
+	Northern Athapaskan languages.
+	In \textit{Handbook of North American Indians: Subarctic},
+	June Helm (ed.), pp. 67–85.
+	18 pp.
+	(Handbook of North American Indians vol.\ 6).
+	Washington DC: Smithsonian Institution Press.
+	\textsc{isbn} 0-16-004578-9.
+	\textsc{lcccn} E77.H25 vol.\ 6.
+	\textsc{anla} \ANLAlink{CA961KG1981}.
+	\begin{itemize}
+	\item	Comparative discussion of Northern Dene languages, covering all Dene
+		languages in Alaska and Canada including Tsuutʼina.
+		Includes consonant and vowel reconstructions,
+		1 to 5 paragraph discussion of each language with documentary histories,
+		discussion of subgrouping problems.
+		Comparable to but much shorter than Krauss 1973 and Krauss 1979.
+	\end{itemize}
+\item	Krauss, Michael E.
+	1986.
+	Edward Sapir and Athabaskan linguistics.
+	In \textit{New perspectives in language, culture, and personality:
+	Proceedings of the Edward Sapir Centenary Conference},
+	William Cowan, Michael K. Foster, \&\ Konrad Koerner (eds.),
+	pp.\ 147–191.
+	44 pp.
+	Amsterdam: John Benjamins.
+	\textsc{isbn} 90-272-4522-3.
+	\textsc{anla} \ANLAlink{CA961K1986}.
+	\begin{itemize}
+	\item	History of Sapir’s work on Dene and Na-Dene languages.
+		Chronicles his work and personal interactions with other researchers (Morice,
+		Goddard, Li, Reichard, etc.) as well as the development of his Na-Dene
+		hypothesis. Complements Krauss 1981 on more general social history.
+	\end{itemize}
+\item	Krauss, Michael E.
+	1987.
+	The name Athabaskan.
+	In \textit{Faces, voices, \&\ dreams: A celebration of the centennial of 
+		Sheldon Jackson Museum, Sitka, Alaska, 1888–1988}, 
+	Peter L. Corey (ed.), pp.\ 104–108.
+	4 pp.
+	Sitka: Alaska State Museums.
+	\textsc{anla} \ANLAlink{CA961K1987}.
+	\begin{itemize}
+	\item	Short discussion of the historical origin of the English name ‘Athabaskan’
+		as applied to the Dene family.
+		Cites Gallatin 1836 as applying the label from Woods Cree \fm{ahðapaskaːw}
+		used for Lake Athabasca.
+		Summarizes the early history of various spellings of the name:
+		Athapascan, Athabascan, Athapaskan, Athabaskan.
+	\end{itemize}
+\item	Mithun, Marianne.
+	1999.
+	Athabaskan-Eyak-Tlingit family.
+	In \textit{The languages of Native North America}, pp.\ 346–367.
+	21 pp.
+	(Cambridge language surveys).
+	Cambridge UK: Cambridge Univ.\ Press.
+	\textsc{isbn} 0-521-23228-7.
+	\textsc{lcccn} PM108.L35 1999.
+	\textsc{anla} \ANLAlink{CA974M1996}.
+	\begin{itemize}
+	\item	Summary of languages and references to documentation.
+		Although not explicitly credited in this section, Keren Rice is the major
+		contributor.
+		Includes subgrouping organization according to Rice.
+		Typological description of notable features in the family (pp.\ 361–366),
+		including phonology, classificatory verbs, and a sketch of verbal structure.
+		Ends with a glossed Denaʼina text (pp.\ 366–367)
+		from Tenenbaum \&\ McGary 1984 (\fm{Denaʼina sukduʼa: Tanaina stories}).
+		Maps on pp.\ xviii–xxi and pp.\ 606–616.
+	\end{itemize}
+\item	Cook, Eung-Do.
+	2003.
+	Athabaskan languages.
+	In \textit{International encyclopedia of linguistics},
+	William J.\ Frawley (ed.),
+	pp.\ 158–165.
+	2nd edn.
+	7 pp.
+	Oxford: Oxford University Press.
+	\textsc{isbn} 0-19-513977-1.
+	\textsc{lcccn} P29.I58 2003.
+	\begin{itemize}
+	\item	Short review of the family.
+		Covers relationships, historical phonology,
+		verbal morphology, classificatory verbs.
+		List of languages with demographics.
+		Includes maps.
+	\end{itemize}
+\item	Rice, Keren \&\ Hargus, Sharon.
+	2005.
+	Introduction.
+	In \textit{Athabaskan prosody},
+	Sharon Hargus \&\ Keren Rice (eds.),
+	pp. 1–45.
+	44 pp.
+	(Current issues in linguistic theory vol.\ 269).
+	Amsterdam: John Benjamins.
+	\textsc{isbn} 90-272-4783-8.
+	\textsc{lcccn} PM641.W67 2005.
+	\textsc{doi} \DOIlink{10.1075/cilt.269}.
+	\begin{itemize}
+	\item	Review of morphology and phonology in Dene languages including
+		phonological domains in the verb word, tonogenesis, tone, stress, and 
+		intonation.
+		Specific discussion of tone in Dakelh and Tsuutʼina.
+		Extensive references to literature and discussion of significant issues
+		across multiple languages and materials.
+	\end{itemize}
+\item	Leer, Jeff.
+	2006.
+	Na-Dene.
+	In \textit{Encyclopedia of language and linguistics}, 2nd edn.,
+	Keith Brown \& Anne H. Anderson (eds.), vol.\ 8 pp.\ 428–430.
+	2 pp.
+	Amsterdam: Elsevier.
+	\textsc{doi} \DOIlink{10.1016/B0-08-044854-2/02272-0}.
+	\begin{itemize}
+	\item	Very short review of the family.
+		Notable for a comparison and reconstruction of the verb template
+		across Proto-Dene, Eyak, and Tlingit.
+	\end{itemize}
+\item	Hargus, Sharon.
+	2010.
+	Athabaskan phonetics and phonology.
+	\textit{Language \&\ Linguistics Compass} 4.10: 1019–1040.
+	21 pp.
+	\textsc{doi} \DOIlink{10.1111/j.1749-818x.2010.00245.x}.
+	\begin{itemize}
+	\item	Review of literature on phonetics and phonology in the family.
+		Addresses diachrony, phonetic production and perception,
+		morphophonology of the verb, syllable structure, and
+		several other phonological topics.
+	\end{itemize}
+\item	Hargus, Sharon.
+	2011.
+	Athabaskan languages.
+	In \textit{Oxford bibliographies: Linguistics},
+	Mark Aronoff (ed.).
+	27 pp.
+	\textsc{doi} \DOIlink{10.1093/OBO/9780199772810-0054}.
+	\begin{itemize}
+	\item	Annotated bibliography of materials on the Dene language family.
+		Includes sections for family and subfamily overviews, bibliographies
+		and state-of-the-art reports, maps, reference resources, descriptive
+		grammars and grammatical sketches, pedagogical grammars, dictionaries and
+		lexicography, texts, phonetics and phonology, morphology and morphophonemics,
+		syntax, semantics, Proto-Athabaskan, language shift, and first-language
+		acquisition.
+		Overlaps with this bibliography but organized by linguistic topic rather
+		than by language and subgroup and mostly limited to Dene languages.
+		Many entries for published articles and papers not included here.
+	\end{itemize}
+\item	Rice, Keren \&\ de Reuse, Willem.
+	2017.
+	The Athabaskan (Dene) language family.
+	In \textit{The Cambridge handbook of linguistic typology},
+	Alexandra Aikhenvald \&\ Robert M.W.\ Dixon (eds.),
+	ch.\ 23, pp.\ 707–746.
+	39 pp.
+	Cambridge UK: Cambridge Univ.\ Press.
+	\textsc{isbn} 978-1-107-09195-5.
+	\textsc{lcccn} P204.C263 2016.
+	\begin{itemize}
+	\item	Typological overview of phenomena in the family.
+		Discusses phonology, morphology, syntax, grammatical relationsand pronouns,
+		and certain lexical issues.
+		Phonology includes consonant and vowel inventories, tone, and
+		syllable structure.
+		Morphology is limited to verb structure: stems and prefixes.
+		Syntax includes noun phrases, sentences, negation, relative clauses,
+		polar questions, and direct discourse.
+		Pronouns and grammatical relations includes animacy and third person reference.
+		Lexical topics include valency, productivity, and verb lexical semantics.
+		Data is taken from a wide variety of sources including field notes and
+		recent publications and covers some less common languages like Mattole, Han,
+		and Jicarilla Apache.
+		Includes map (p.\ 708).
+	\end{itemize}
+\item	Jaker, Alessandro; Welch, Nicholas; \&\ Rice, Keren.
+	2020.
+	The Na-Dene languages.
+	In \textit{The Routledge handbook of North American languages},
+	Daniel Siddiqi, Michael Barrie, Carrie Gillon, Jason D. Haugen, \&\ Éric Mathieu (eds.),
+	ch.\ 20 pp.\ 473–503.
+	30 pp.
+	New York: Routledge.
+	\begin{itemize}
+	\item	Typological and theoretical overview of phenomena in the family.
+		Discusses verb morphology, constituent order, nominal inflection including
+		possession and plurality, postpositions, temporal inflection
+		(aspect, tense, mood), complex clauses, nonverbal predication, and semantics.
+		Also short notes on subgrouping and population.
+		Some sections detail several theoretical approaches, others are limited to
+		summaries of literature.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Edited volumes on Dene languages}\label{sec:comphist-edvol}
+
+This section lists published collections of papers on languages in the family.
+Books dedicated to one or only a few closely related languages are listed in more specific sections.
+
+\begin{enumerate}
+\item	Hoijer, Harry (ed.).
+	1963.
+	\textit{Studies in the Athapaskan languages}.
+	viii + 154 pp.
+	(University of California publications in linguistics no.\ 29).
+	Berkeley: Univ.\ of California Press
+	\textsc{lcccn} P25.C25 vol.\ 29.
+	\begin{itemize}
+	\item	Collection of papers from a seminar on Dene languages at Univ.\ of Oklahoma
+		in August 1958.
+		Includes descriptions of Slave, Dëne Sųłiné, Tsuutʼina, Plains Apache, and
+		Western Apache.
+	\end{itemize}
+\item	Hamp, Eric P.; Howren, Robert; King, Quindel; Lowery, Brenda M.; \&\ Walker, Richard (eds.).
+	1979.
+	\textit{Contributions to Canadian linguistics}.
+	iv + 118 pp.
+	(Mercury Series, Canadian Ethnology Service no. 50).
+	Ottawa: National Museums of Canada.
+	\textsc{lcccn} PM239.H34 1979.
+	\begin{itemize}
+	\item	Collection of papers on Canadian indigenous languages.
+		Includes three papers on Dene phonology: Tłįchǫ (Howren),
+		Chilcotin (King), Carrier (Walker).
+	\end{itemize}
+\item	Cook, Eung-Do \&\ Rice, Keren (eds.).
+	1989.
+	\textit{Athapaskan linguistics: Current perspectives on a language family}.
+	viii + 645 pp.
+	(Trends in linguistics: State-of-the-art reports vol.\ 15).
+	Berlin: Mouton de Gruyter.
+	\textsc{isbn} 0-89925-282-6.
+	\textsc{lcccn} PM641.A94 1989.
+	\textsc{doi} \DOIlink{10.1515/9783110852394}.
+	\begin{itemize}
+	\item	Collection of papers on general topics in Dene languages.
+		“This volume represents an attempt to show the state of the art in
+		Athapaskan linguistics in the mid 1980s” (p.\ 1).
+		Papers cover several different languages, ranging over phonology,
+		morphology, syntax, discourse, and historical reconstruction.
+		Languages include Beaver, Carrier, Chicotin, Sekani, Slave, Navajo,
+		and Denaʼina. 
+	\end{itemize}
+\item	Jelinek, Eloise; Midgette, Sally; Rice, Keren; \&\ Saxon, Leslie (eds.).
+	1996.
+	\textit{Athabaskan language studies: Essays in honor of Robert W.\ Young}.
+	xv + 490 pp.
+	Albuquerque: Univ. of New Mexico Press.
+	\textsc{isbn} 0-8263-1705-7.
+	\textsc{lcccn} PM641.A92 1996.
+	\begin{itemize}
+	\item	Festschrift for Bob Young.
+		Most papers are on Navajo, some including discussion of other Dene languages;
+		also papers on Tanana (Suttle) and Gwichʼin (Leer), and one on
+		twelve Alaskan languages (Kari).
+		Review of volume by Victor Golla in \textit{Anth.\ Ling.}
+		vol.\ 40 no.\ 1 pp.\ 147–151 (\textsc{Jstor} \JSTORlink{30028516}).
+	\end{itemize}
+\item	Hargus, Sharon \&\ Rice, Keren (eds.).
+	2005.
+	\textit{Athabaskan prosody}.
+	xii + 432 pp.
+	(Current issues in linguistic theory vol.\ 269).
+	Amsterdam: John Benjamins.
+	\textsc{isbn} 90-272-4783-8.
+	\textsc{lcccn} PM641.W67 2005.
+	\textsc{doi} \DOIlink{10.1075/cilt.269}.
+	\begin{itemize}
+	\item	Collection of papers on prosody, tone, length, stress, metrical phonology,
+		and other phonological phenomena in Dene languages.
+		Includes edited version of Krauss’s unpublished 1979 paper on the
+		historical reconstruction of tone and laryngeal phenomena in Proto-Dene.
+		Languages include Tahltan, Western Apache, Dëne Sųłiné, Tanacross,
+		Slave, Sekani, and Witsuwitʼen.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Structural comparison}\label{sec:comphist-comp}
+
+This section lists publications that analyze particular linguistic phenomena across a wide range of languages in the family.
+Some of these publications use one language as a model to illustrate phenomena that are meant to be analyzed across most or all of the languages in the family; they are listed here since their concepts are expected to apply more widely than just to the language(s) presented.
+The model language in such cases is usually Navajo, although Ahtna, Koyukon, and Slave are also occasionally featured.
+
+\begin{enumerate}
+\item	Whorf, Benjamin L.
+	1932.
+	The structure of the Athabascan languages.
+	19 pp.
+	Unpublished typescript. 
+	Final paper for a class taught by Edward Sapir at Yale University in 1932.
+	\textsc{anla} \ANLAlink{CA932W1932b}.
+\item	Krauss, Michael E.
+	1968.
+	Noun-classification systems in Athapaskan, Eyak, Tlingit, and Haida verbs.
+	\textit{IJAL} 34.3: 194–203.
+	9 pp.
+	\textsc{Jstor} \JSTORlink{1263565}.
+	\begin{itemize}
+	\item	Description and analysis of classificatory verbs in Na-Dene languages.
+		Detailed description for Eyak based on Krauss’s fieldwork.
+		Comparison with Dene is mostly with Ahtna and Navajo.
+		Tlingit data from Naish 1966 and Story 1966 with some reference to Boas 1917.
+		Haida data from Swanton.
+		Comparison with Haida is abortive and Krauss says more documentation is needed.
+	\end{itemize}
+\item	Hoijer, Harry.
+	1971.
+	Athapaskan morphology.
+	In \textit{Studies in American Indian languages}, Jesse Sawyer (ed.), pp.\ 113–147.
+	(Univ. of California publications in linguistics vol.\ 65).
+	Berkeley: Univ.\ of California Press.
+	\textsc{anla} \ANLAlink{CA938H1971b}.
+\item	Kari, James.
+	1975.
+	The disjunct boundary in the Navajo and Tanaina verb prefix complexes.
+	\textit{IJAL} 41.4: 330–345.
+	15 pp.
+	\textsc{Jstor} \JSTORlink{1264556}.
+	\begin{itemize}
+	\item	Article presenting evidence for the word-internal phonological boundary
+		at the direct object prefix which separates the conjunct and disjunct domains.
+		Data from Denaʼina and Navajo.
+		Target phenomena are \fm{n(i)-} absorption and vowel deletion and
+		the \fm{∅} imperfective mode.
+		Also noted are epenthesis of \fm{ɣ} (‘gamma insertion’), \fm{y} (‘gliding’),
+		and \fm{ʔ} (‘glottal insertion’).
+		Reviews previous literature by Hoijer, Li, Krauss, and others.
+		Codified the now widely adopted analysis of the distinction between the
+		conjunct domain of verb prefixes and the disjunct domain of verb prefixes.
+	\end{itemize}
+\item	Kari, James.
+	1979.
+	\textit{Athabaskan verb theme categories: Ahtna}.
+	230 pp.
+	(\textsc{anlc} research papers no.\ 2).
+	Fairbanks: \textsc{anlc}.
+	\begin{itemize}
+	\item	Description and analysis of lexical aspect categories in Ahtna with
+		application to other Dene languages.
+		Comparison is mostly limited to Navajo.
+		Forms the primary basis for the analysis of lexical entries and
+		lexical aspect phenomena in most subsequent work on Dene languages.
+	\end{itemize}
+\item	Kari, James.
+	1992.
+	Some concepts in Ahtna Athabaskan word formation.
+	In \textit{Morphology now}, Mark Aronoff (ed.), pp.\ 107–131.
+	24 pp.
+	\textsc{anla} \ANLAlink{AT973K1992}.
+\item	Kibrik, Andrej A.
+	1993.
+	Transitivity increase in Athabaskan languages.
+	In \textit{Causatives and transitivity}, Bernard Comrie \& Maria Polinsky (eds.),
+	pp.\ 47–68.
+	21 pp.
+	Amsterdam: John Benjamins.
+\item	Kibrik, Andrej 
+	1996.
+	Transitivity decrease in Navajo and Athabaskan: actor-affecting propositional
+	derivations.
+	In \textit{Athabaskan language studies: Essays in honor of Robert W. Young},
+	Eloise Jelinek, Sally Midgette, Keren Rice, \&\ Leslie Saxon (eds.),
+	pp.\ 259–304.
+	45 pp.
+	Albuquerque: Univ.\ of New Mexico Press.
+\item	Rice, Keren.
+	2000.
+	\textit{Morpheme order and semantic scope}.
+	xiii + 453 pp.
+	(Cambridge studies in linguistics no.\ 90).
+	Cambridge UK: Cambridge Univ.\ Press.
+	\textsc{isbn} 0-521-58354-3.
+	\textsc{lcccn} PM641.R53 1999.
+\item	Tuttle, Siri G.\ \&\ Sharon Hargus. 2004.
+	Explaining variability in affix order: the Athabaskan areal and third person prefixes.
+	In \textit{Working papers Athabaskan languages vol.\ 4},
+	Gary Holton \&\ Siri G.\ Tuttle (eds.),
+	pp.\ 70–98.
+	Fairbanks: \textsc{anlc}.
+\end{enumerate}
+
+\subsection{Historical reconstruction}\label{sec:comphist-hist}
+
+\begin{enumerate}
+\item	Sapir, Edward.
+	1915.
+	The Na-Dene languages: A preliminary report.
+	\textit{American Anthropologist} 17.3: 534–558.
+	24 pp.
+	\textsc{Jstor} \JSTORlink{660504}.
+\item	Li, Fang-Kuei.
+	1933b.
+	Chipewyan consonants.
+	\textit{Bulletins of the Institute of History and Philology of the Academica Sinica,
+		Tsʼai Yuan Pʼei Anniversary Volume},
+		supplementary vol.\ 1, pp.\ 429–467.
+	38 pp.
+	Taipei: Academia Sinica.
+	\textsc{anla} \ANLAlink{CA927L1933}.
+	\begin{itemize}
+	\item	Description and analysis of consonants, including distribution in stem
+		syllables and prefixes.
+		Comparison with other Dene languages and reconstruction of PD forms.
+	\end{itemize}
+\item	Krauss, Michael E.
+	1964.
+	\textit{Proto-Athapaskan-Eyak and the problem of Na-Dene: The phonology}.
+	\textit{IJAL} 30.2: 118–131.
+	13 pp.
+	\textsc{Jstor} \JSTORlink{1263479}.
+	\begin{itemize}
+	\item	Preliminary report on Krauss’s work in reconstruction of Proto-Dene
+		and Proto-Dene-Eyak following on Sapir’s earlier work.
+		Primarily consonants with some discussion of vowels and vocalic
+		phenomena and preliminary syllable structure.
+		Includes list of 69 cognates.
+		Languages include Gwichʼin, Han, Tsetsaut, Holikachuk (“Ingalik”),
+		Minto Tanana, Dëne Sųłiné, Navajo, Mattole, Tsuutʼina, Koyukon,
+		Eyak, Tlingit, and Haida.
+	\end{itemize}
+\item	Krauss, Michael E.
+	1965.
+	\textit{Proto-Athapaskan-Eyak and the problem of Na-Dene II: Morphology}.
+	\textit{IJAL} 31.1: 18–28.
+	10 pp.
+	\textsc{Jstor} \JSTORlink{1264070}.
+	\begin{itemize}
+	\item	Preliminary report on Krauss’s work in reconstruction of Proto-Dene
+		and Proto-Dene-Eyak following on Sapir’s earlier work.
+		Comparative details of verb morphology, primarily considering the
+		‘classifier’ prefixes, subject prefixes, and aspectual prefixes.
+		Haida is considered but not included in reconstructions.
+		Fewer languages are mentioned than in Krauss 1964, specifically 
+		Mattole, Tsuutʼina, Navajo, Minto Tanana, Dëne Sųłiné, Eyak,
+		Tlingit, and Haida.
+		The analysis of the classifiers is mostly superseded by Krauss 1969.
+	\end{itemize}
+\item	Krauss, Michael E.
+	1969.
+	\textit{On the classifiers in the Athapascan, Eyak, and the Tlingit verb}.
+	Pp.\ 52–83 in Supplement to \textit{IJAL}
+	vol.\ 35 no.\ 4.
+	(Indiana University publications in anthropology and linguistics, memoir 24).
+	31 pp.
+	Baltimore: Waverly Press.
+	\textsc{anla} \ANLAlink{CA961K1969a}.
+	\begin{itemize}
+	\item	Description, analysis, and reconstruction of the ‘classifier’
+		prefixes in Dene languages with detailed comparison to Eyak
+		and Tlingit.
+		Dene languages primarily described are Navajo, the Minto variety
+		of Tanana (Krauss’s fieldwork), Galice, Mattole, and Dëne Sųłiné.
+		Eyak data from Krauss’s fieldwork, Tlingit data from Naish 1966
+		and Story 1966 with some reference to Boas 1917.
+	\end{itemize}
+\item	Krauss, Michael E. 1977a.
+	\textit{Proto-Athabaskan-Eyak fricatives and the first person singular}.
+	Unpublished manuscript.
+	Fairbanks: \textsc{anlc}.
+	\textsc{anla} \ANLAlink{CA961K1977a}.
+\item	Krauss, Michael E. 1977b.
+	\textit{The Proto-Athabaskan and Eyak kinship system}.
+	Unpublished manuscript.
+	Fairbanks: \textsc{anlc}.
+	\textsc{anla} \ANLAlink{CA961K1977b}.
+\item	Leer, Jeff.
+	1979.
+	\textit{Proto-Athabaskan stem variation, part one: Phonology}.
+	iii + 100 pp.
+	(\textsc{anlc} research papers no.\ 1).
+	Fairbanks: \textsc{anlc}.
+	\textsc{anla} \ANLAlink{CA965L1979b}.
+	\begin{itemize}
+	\item	Reconstruction of stem variation phonology in Proto-Dene.
+		Based primarily on Navajo, Tsuutʼina, Dëne Sųłiné, Carrier, Gwichʼin,
+		Koyukon, Ahtna, and Hupa. Some other data from Tanana, Deg Xinag,
+		and Mattole. Occasional comparison with Eyak, and Tlingit.
+		Includes reconstruction of syllable nucleus, stem variation
+		in open and closed syllable stems, and a typology of root
+		phonology classes.
+	\end{itemize}
+\item	Levine, Robert D.
+	1979.
+	Haida and Na-Dene: A new look at the evidence.
+	\textit{IJAL} 45.2: 157–170.
+	13 pp.
+	\textsc{Jstor} \JSTORlink{1264780}.
+\item	Krauss, Michael E.\ \&\ Leer, Jeff.
+	1981.
+	\textit{Athapaskan, Eyak, and Tlingit sonorants}.
+	210 pp.
+	(\textsc{anlc} research papers no.\ 5).
+	Fairbanks: \textsc{anlc}.
+	\textsc{anla} \ANLAlink{CA962KL1981}.
+	\begin{itemize}
+	\item	Historical analysis and reconstruction of sonorant phonemes in
+		Proto-Dene and comparison with Eyak and Tlingit.
+		Special sections on PD \fm[*]{w}, \fm[*]{n}, \fm[*]{y}, \fm[*]{ŋ},
+		and \fm[*]{m} as well as ablaut, nasalization, and disyllabic stems
+		with an internal sonorant.
+		Scattered discussion of specific stem phonology issues.
+		Short discussion of Haida and Tsimshianic.
+		Index of reconstructed PD stems pp.\ 190–201.
+	\end{itemize}
+\item	Leer, Jeff. 1999.
+	Tonogenesis in Athabaskan.
+	In \textit{Cross-linguistic Studies of tonal phenomena: Tonogenesis, typology,
+		and related topics},
+	Shigeki Kaji (ed.), pp. 37–66.
+	29 pp.
+	Tokyo: Tokyo University of Foreign Studies.
+	\textsc{anla} \ANLAlink{CA965L1999b}.
+\item	Krauss, Michael E.
+	2005.
+	Athabaskan tone.
+	In \textit{Athabaskan prosody}, Sharon Hargus \&\ Keren Rice (eds.), pp.\ 51–136.
+	85 pp.
+	(Current issues in linguistic theory vol.\ 269).
+	Amsterdam: John Benjamins.
+	\textsc{doi} \DOIlink{10.1075/cilt.269}.
+\end{enumerate}
+
+\section{Tlingit}\label{sec:tlingit}
+
+The English name \fm{Tlingit} is most often pronounced [\ipa{ˈklɪŋ.ˌkɪt}], though [\ipa{ˈklɪŋ.ˌɡɪt}] is also common. It is from Tlingit \fm{lingít} [\ipa{ɬìn.ˈkít}] ‘person’ which is also used as an endonym.
+
+Also known as: Lhiinkit, Hlingĭt, Klinkit, T’linket, Thlingit, Tlinget, Tlinket, Stikine, Sitka, Kolosch, Kolosh, Kolouche. Russian Колошенский \fm{Kološenskij}, Стихинский \fm{Stixinskij}.
+
+ISO 639-3 \texttt{tli}; Glottolog \texttt{tlin1245}.
+
+Reported dialects are (Crippen 2019):
+\begin{itemize}
+\item	Tongass: Ketchikan, Cape Fox
+\item	Southern: Sanya (Ketchikan, Saxman), Henya (Klawock)
+\item	Northern: Transitional (Wrangell, Petersburg, Kake),
+		Central Coast (Angoon, Sitka, Hoonah, Juneau, Haines, Klukwan, Skagway),
+		Gulf Coast (Dry Bay, Yakutat),
+		Inland (Atlin, Teslin, Carcross, Tagish)
+\end{itemize}
+
+Tlingit is spoken throughout most of southeastern Alaska and in neighbouring regions of Yukon Territory and British Columbia.
+Tlingit neighbours Ahtna, Eyak, Southern Tutchone, Tagish, Kaska, Tahltan, and Tsetsaut as well as Haida, Coast Tsimshian, and Nisg̱aʼa.
+Extensive bilingualism with Eyak, Tagish, or Haida is reported in some communities.
+Tlingit is highly divergent from the rest of the Na-Dene family; in most respects it is closer to Eyak than to any other language, but in some areas of grammar it is much closer to the Dene languages.
+The Tongass dialect lacks tone and has a system of laryngeal vowels (modal short /\ipa{V}/, modal long /\ipa{Vː}/, fading long /\ipa{Vʰ}/, glottalized long /\ipa{Vˀ}/) absent in other dialects.
+The Southern and Northern dialects have tone contrasts:
+Northern Tlingit contrasts level H and L tone on short and long vowels;
+Southern Tlingit has the same contrasts as Northern Tlingit with an additional falling HL tone on long vowels.
+
+\begin{enumerate}
+\item	Veniaminov, Ivan.
+	1846.
+	\textit{Замѣ\-ча\-нія о кол\-ош\-ен\-скомъ и кадь\-як\-скомъ язык\-ахъ…
+		(Observations about the Tlingit \& Kodiak (Alutiiq) languages…)}.
+	Санкт\-петер\-бургъ (St. Petersburg):
+	Им\-пер\-а\-тор\-скій ака\-д\-емій на\-укъ (Imperial Academy of Science).
+	Alaska State Historical Library \Vildalink{10858}.
+	\FIXME{\textsc{anla} link?}
+	\begin{itemize}
+	\item	First Tlingit grammar, from a Sitka consultant named Dimitri.
+		Structured along Greek lines.
+		Includes Russian-Tlingit wordlist of about 1100 items.
+		Cyrillic transcription is phonemically inadequate, but diacritics
+		need more interpretation.
+		Transcription reflects some phonological phenomena that are now absent
+		(e.g.\ nasal \fm{ÿ̃} [\ipa{ɰ̃}] < \fm[*]{ŋ}) so this has significant
+		importance for historical analysis.
+	\end{itemize}
+\item	Kelly, William A.\ \&\ Willard, Frances H.
+	1905.
+	Grammar and vocabulary of the Hlingĭt language of Southeastern Alaska.
+	In \textit{Report of the Commissioner of Education}, ch.\ 10, pp.\ 715–766.
+	51 pp.
+	(Annual reports of the Department of the Interior for the fiscal year ended
+		June 30, 1904, vol. 1).
+	Washington DC: U.S.\ Government Printing Office.
+	\textsc{anla} \ANLAlink{TL904KW1905}.
+	\FIXME{Other links?}
+	\begin{itemize}
+	\item	Sketch grammar of Tlingit based on speech of two Sitka speakers
+		(Frances H.\ Willard and Matilda Paul Tamaree).
+		Transcription is peculiar (“Websterian orthoepy”) but has nearly complete
+		coverage of phonemic contrasts (a historical first).
+		Does not distinguish tone.
+		Organization proceeds along Latin lines, relatively clumsy analysis.
+		Includes assorted phrases, hymns, prayers, some biblical translations,
+		wordlist of about 1500 items with English-Tlingit and Tlingit-English reversal.
+		Most of the data has yet to be reinterpreted and analyzed.
+	\end{itemize}
+\item	Swanton, John R.
+	1908.
+	\textit{Social condition, beliefs, and linguistic relationship of the Tlingit Indians}.
+	(Annual reports of the Bureau of American Ethnology to the secretary of the
+		Smithsonian Institution, no.\ 26).
+	Washington DC: U.S.\ Gov’t Printing Office.
+	\textsc{lcccn} E51.U55 26th.
+	\textsc{anla} \ANLAlink{TL901S1908}.
+	\textsc{hdl} \HDLlink{10088/91722}.
+	\FIXME{Archive.org link}
+	\begin{itemize}
+	\item	Ethnography from consultants in Sitka and Wrangell during 1904.
+		Includes a wide variety of names and some other vocabulary throughout.
+		Also discussion of possible relationship between Tlingit and Haida languages
+		with comparative wordlist of 325 items (pp.\ 472–485).
+		Swanton’s transcriptions and analysis are unreliable and must be interpreted
+		by experts.
+	\end{itemize}
+\item	Swanton, John R.
+	1909.
+	\textit{Tlingit myths and texts}.
+	viii + 451 pp.
+	(Bulletins of the Smithsonian Institution Bureau of American Ethnology, vol.\ 39).
+	Washington DC: U.S.\ Gov’t Printing Office.
+	\textsc{lcccn} PM2455.Z73 S8 1909.
+	\textsc{anla} \ANLAlink{TL901S1909}.
+	\textsc{hdl} \HDLlink{10088/15506}.
+	\FIXME{Archive.org link}
+	\begin{itemize}
+	\item	Narratives recorded in English and Tlingit in Sitka and Wrangell, 1904.
+		Texts (\#89–106) in Tlingit pp.\ 252–371.
+		Oratory in Tlingit pp.\ 372–389.
+		Lyrics in Tlingit pp.\ 390–415.
+		Tlingit materials accompanied by interlinear glosses.
+		The remainder is texts in English (pp.\ 3–251) and abstracts in English
+		(pp.\ 416–451).
+		Swanton’s transcriptions and analysis are unreliable and must be interpreted
+		by experts.
+		There is an ongoing project to retranscribe and analyze the narratives,
+		oratory, and lyrics.
+	\end{itemize}
+\item	Swanton, John R.
+	1911.
+	Tlingit.
+	In \textit{Handbook of American Indian languages}, Franz Boas (ed.),
+	part 1, pp.\ 159–204.
+	46 pp.
+	(Smithsonian Institution Bureau of American Ethnology Bulletin no.\ 40).
+	Washington DC: U.S.\ Gov’t Printing Office.
+	\textsc{lcccn} E51.U6 no.\ 40.
+	\textsc{anla} \ANLAlink{TL901S1911}.
+	\textsc{hdl} \HDLlink{10088/15507}.
+	Archive.org \ArchiveOrglink{handbookamerica00fracgoog}.
+	\begin{itemize}
+	\item	Grammatical sketch based on data from Swanton’s 1904 fieldwork.
+		Addresses phoneme inventory and phonology, nouns and noun affixation,
+		pronouns, demonstratives, basic verb structure, and some adverbs.
+		Vocabulary (pp.\ 195–199) covers nouns, verbs, numerals, and interrogative
+		pronouns.
+		Text (pp.\ 200–203) and translation (p.\ 204) are identical to \#101 in
+		Swanton 1909 (pp.\ 321–323).
+		Presentation of the text differs however, including additional footnotes on
+		morphology in each word.
+		Swanton’s transcriptions and analysis are unreliable and must be interpreted
+		by experts.
+	\end{itemize}
+\item	Boas, Franz.
+	1917.
+	\textit{Grammatical notes on the language of the Tlingit Indians}.
+	179 pp.
+	(University Museum Anthropological Publications vol.\ 8, no.\ 1).
+	Philadelphia: University of Pennsylvania.
+	\textsc{lcccn} PM2455.B6.
+	\textsc{anla} \ANLAlink{TL888B1917}.
+	\FIXME{Other links?}
+	\begin{itemize}
+	\item	Descriptive grammar based on work by Boas with \fm{Stoowuḵáa} Louis Shotridge
+		in 1915 as well as materials from Swanton.
+		First adequate account of Tlingit phoneme inventory and tonal phonology
+		despite some inaccuracies; notably includes waveforms (kymograms) of two tone
+		minimal pairs.
+		Much of the analysis is adequate and some insights remain to be explored. 
+		Phonetics and phonology, verb structure, various suffixes on nouns,
+		verbs, adverbs, and numerals, postpositions, relational nouns,
+		compounding, pronouns, negation, and impersonal verbs without subject
+		or object marking.
+		Vocabulary of nouns, verbs, particles, and numerals and reverse
+		English-Tlingit finderlist.
+		Transcribed and glossed text (pp.\ 168–175)
+		with free translation (pp.\ 175–179).
+		This narrative by Shotridge (“Origin of Mosquitoes”, \fm{Táaxʼaa}) was
+		recorded on a phonograph and the first half of this recording is available
+		in digital form.
+		Shotridge was more than just a consultant for Boas as evidenced by Shotridge’s
+		own notes in the University of Pennsylvania Museum Archives that contain
+		independent work on verb paradigms and the lexicon.
+		Boas’s “corrections” to the first half of Shotridge’s transcription of his
+		own narrative are less accurate than the latter “uncorrected” half by
+		Shotridge alone.
+	\end{itemize}
+\item	Velten, Henry.
+	1939.
+	Two southern Tlingit tales.
+	\textit{IJAL} 10.2/3: 65–74.
+	10 pp.
+	\textsc{Jstor} \JSTORlink{1263225}.
+	\begin{itemize}
+	\item	Narratives transcribed by Velten from \fm{Yeex̱aas} Lester Roberts in Seattle,
+		late 1930s.
+		Two texts with interlinear glosses, English translations, grammatical comments,
+		and a morpheme list.
+		Transcription follows Boas 1917.
+		Velten notes some differences in this Henya variety of Southern Tlingit,
+		but he missed the distinctive falling tone /\ipa{V̂ː}/ so there is some missing
+		information that needs to be reconstructed.
+	\end{itemize}
+\item	Velten, Henry.
+	1944.
+	Three Tlingit stories.
+	\textit{IJAL} 10.4: 168–180.
+	12 pp.
+	\textsc{Jstor} \JSTORlink{1262786}.
+	\begin{itemize}
+	\item	Narratives transcribed by Velten from \fm{Yeex̱aas} Lester Roberts in Seattle,
+		late 1930s.
+		Three texts with interlinear glosses, English translations, grammatical
+		comments, and morpheme list.
+		Accompanied by structural analysis of the phoneme system.
+	\end{itemize}
+\item	Naish, Constance M.
+	1966.
+	\textit{A syntactic study of Tlingit}.
+	xii + 176 pp.
+	London: School of Oriental and African Languages, University of London, master’s thesis.
+	\textsc{anla} \ANLAlink{TL959N1966}.
+	\begin{itemize}
+	\item	Analysis of Tlingit morphosyntax based on fieldwork in Angoon.
+		Introduces phonological system including discussion of suprasegmental features
+		and common morphophonological alternations.
+		Description of sentences, subordination, coordination, parataxis, clause types,
+		noun phrases as arguments, postpositional phrases, adverbial phrases, and
+		various particles.
+		Some discussion of verb morphology at the left and right edges of the verb word.
+		Short text (53 lines) by \fm{Asx̱ʼaak} George Betts with detailed
+		segmentation and analysis (pp.\ 138–152).
+		Transcription is a combination of IPA vowels and Americanist consonants;
+		low tone is marked only on stressed syllables, high tone is marked in almost
+		all cases but occasionally not (e.g.\ \fm{ʌwɛ́} for \fm{áwé} [\ipa{ʔá.wé}]).
+		Analysis heavily depends on Kenneth Pike’s Tagmemics.
+	\end{itemize}
+\item	Story, Gillian L.
+	1966.
+	\textit{A morphological study of Tlingit}.
+	viii + 214 pp.
+	London: School of Oriental and African Languages, University of London, master’s thesis.
+	\textsc{anla} \ANLAlink{TL959N1966}.
+	\begin{itemize}
+	\item	Analysis of Tlingit morphology based on fieldwork in Angoon.
+		Introduces phoneme inventory, syllable structure, “tone group”, and
+		general morphophonology.
+		Summarizes syntactic structure as detailed in Naish 1966.
+		Description of verb stem including the first comprehensive account of verb
+		stem variation.
+		Detailes the verb theme (implicitly following Hoijer), inflectional affixes,
+		morphophonology of the verb, paradigmatic dimensions, and auxiliaries.
+		Final chapter sketches noun, postposition, and adverb morphology.
+		Transcription is essentially identical to Naish 1966 though there are occasional
+		subtle differences.
+		Analysis depends on Kenneth Pike’s Tagmemics, but less so than Naish 1966.
+	\end{itemize}
+\item	Story, Gillian L.
+	1972.
+	\textit{A sample grammar of Tlingit}.
+	iii + 52 pp.
+	(Second year collected notes vol.\ 2).
+	London: Summer Institute of Linguistics.
+	\textsc{lcccn} PM2455.S765 1972.
+	\textsc{anla} \ANLAlink{TL959S1972}.
+	\begin{itemize}
+	\item	Sketch grammar of Tlingit based on two short texts (pp.\ 34–45; 61 \&\ 25 lines)
+		and a collection of example sentences (pp.\ 46–52; 150 items).
+		Describes discourse, clause types, phrase types, word types, and verb structure.
+		Analysis is entirely in Kenneth Pike’s Tagmemics as it was intended
+		for teaching that framework.
+	\end{itemize}
+\item	Leer, Jeff.
+	1973.
+	\textit{Tlingit stem collection}.
+	Unpublished manuscript.
+	3784 pp.
+	\textsc{anla} \ANLAlink{TL962L1973g} \&\ \ANLAlink{TL962L1975n}.
+	\begin{itemize}
+	\item	Compilation of words (esp.\ verb forms), phrases, and sentences.
+		Mostly from Leer’s fieldwork and Story \&\ Naish 1973, with scattered
+		inclusion of data from Aurel Krause, Veniaminov, Swanton, etc.
+		Organized by stem in 16 three-ring binders; these have been split
+		into two separate \textsc{anla} call numbers.
+		Orthography or transcription varies depending on source and dialect.
+		Originally intended as the basis for a dictionary which was never developed.
+		Still stands as the most expansive lexical documentation of the language,
+		together with Leer 1976 and Leer 1978.
+	\end{itemize}
+\item	Story, Gillian L. \&\ Naish, Constance M.
+	1973.
+	\textit{Tlingit verb dictionary}.
+	392 pp.
+	Fairbanks: \textsc{anlc}.
+	\textsc{isbn} 0-933769-25-3.
+	\textsc{anla} \ANLAlink{TL959NS1973}.
+	\begin{itemize}
+	\item	Detailed though incomplete dictionary of verbs.
+		Lacks some essential lexical information (e.g.\ conjugation class, stem
+		variation) so that conjugation from provided information is not possible.
+		Primarily English–Tlingit with extensive example sentences drawn mostly from
+		unrecorded conversation (Story p.c.\ 2014).
+		Tlingit–English reversal is essentially a finderlist, alphabetically sorted
+		by stem with an unusual alphabetic ordering.
+		Appendix (pp.\ 345–392) is a grammar sketch mostly superseded by Leer 1991
+		and also notably differing from Story 1966, Naish 1966, and Story 1972 in some
+		details.
+	\end{itemize}
+\item	Krauss, Michael E.
+	1976.
+	\textit{History of the documentation of the Tlingit language}.
+	Unpublished typescript.
+	i + 34 pp.
+	\textsc{anla} \ANLAlink{TL964K1976}.
+	\begin{itemize}
+	\item	Comprehensive annotated bibliography of Tlingit materials from 1714–1970.
+		Intended to accompany a similar bibliography by Richard and Nora
+		Marks Dauenhauer, but this was not completed.
+		Organized into historical periods, with one or two paragraphs of discussion
+		for each entry.
+		Each period includes a short historical discussion.
+		All listed documents are available in the Alaska Native Language Archive
+		though call numbers are absent.
+		Annotations for many entries include critique and discussion of historical
+		context that may be otherwise undocumented, as well as references to earlier
+		materials.
+	\end{itemize}
+\item	Leer, Jeff.
+	1976.
+	\textit{Tlingit verb catalogue}.
+	Unpublished manuscript.
+	880 pp.
+	\textsc{anla} \ANLAlink{TL962L1975n}.
+	\begin{itemize}
+	\item	Compilation of verbs, usually limited to perfective and imperfective forms.
+		Abstracted from Leer 1973 and thus from its sources, with occasional additions
+		by Leer from other sources through 2010.
+		Scattered ethnographic comments and elaborations by \fm{Kʼóox} Johnny Marks.
+		Overlaps with but does not entirely match the spread of data in Leer 1973.
+		Orthography or transcription varies depending on source and dialect.
+		Originally intended as the basis for a dictionary which was never developed.
+		Together with Leer 1973 and Leer 1978 this is the most extensive documentation
+		of verbs.
+	\end{itemize}
+\item	Leer, Jeff.
+	1978.
+	\textit{Tlingit stem list}.
+	iii + 79 pp.
+	Unpublished manuscript.
+	\textsc{anla} \ANLAlink{TL962L1975n}.
+	\begin{itemize}
+	\item	Documentation of Tlingit stems (verbs, nouns, and other parts of speech).
+		Typescript with extensive manuscript additions over several decades.
+		Transcription reflects Tongass Tlingit vowel phonology although data covers
+		all dialects.
+		Originally abstracted from Leer 1973 and Leer 1976, but includes some data
+		not documented elsewhere.
+	\end{itemize}
+\item	Williams, Frank; Williams, Emma; \&\ Leer, Jeff.
+	1978.
+	\textit{Tongass texts}.
+	Fairbanks: \textsc{anlc}.
+	\textsc{anla} \ANLAlink{TL978WWL1978}.
+	\begin{itemize}
+	\item	First published material on the Tongass dialect of Tlingit which lacks tone
+		and has laryngealized vowels (/\ipa{V, Vː, Vˀ, Vʰ}/) unlike all other dialects.
+		Collection of five oral narratives with facing page English translations.
+		Preceded by an introduction to the distinct phonology of Tongass Tlingit as
+		well as discussion of its relationship to the Sanya and Henya varieties of
+		Southern Tlingit.
+		The Southern Tlingit dialect has not been described in any detail so this is
+		also an important record of information about it.
+	\end{itemize}
+\item	Dauenhauer, Nora Marks \&\ Dauenhauer, Richard.
+	1987.
+	\textit{Haa shuká, our ancestors: Tlingit oral narratives}.
+	(Classics of Tlingit oral literature vol.\ 1).
+	Seattle: Univ.\ of Washington Press.
+	\textsc{isbn} 0-295-96495-2.
+	\textsc{lcccn} E99.T6 H22 1987.
+	\FIXME{links?}
+	\begin{itemize}
+	\item	Collection of 15 transcribed oral narratives with facing page English
+		translations and detailed endnotes on cultural and some linguistic issues.
+		Preceded by essay on structure and style of Tlingit oral narrative as well
+		as discussion of translation and some grammatical information.
+		Includes short biographies of each narrator.
+	\end{itemize}
+\item	Dauenhauer, Nora Marks \&\ Dauenhauer, Richard.
+	1990.
+	\textit{Haa shuká, our ancestors: Tlingit oral narratives}.
+	(Classics of Tlingit oral literature vol.\ 2).
+	Seattle: Univ.\ of Washington Press.
+	\textsc{isbn} 0-295-96850-8.
+	\textsc{lcccn} E99.T6 H23 1990.
+	\FIXME{links?}
+	\begin{itemize}
+	\item	Collection of approximately 32 transcribed public speeches with facing page
+		English translations and detailed endnotes.
+		Notably includes the two oldest transcriptions of recorded Tlingit speech from
+		two unidentified individuals in 1899 recorded on wax cylinder.
+		Preceded by extensive essay on Tlingit social structure, clan possessions,
+		social contexts of oratory, structure of memorial potlatches,
+		simile and metaphor, use of physical objects in oratory, spiritual reference
+		in oratory, and vocabulary of spirituality.
+		Includes short biographies of each narrator.
+	\end{itemize}
+\item	Leer, Jeff.
+	1991.
+	\textit{The schetic categories of the Tlingit verb}.
+	xviii + 516 pp.
+	Chicago: Univ.\ of Chicago, PhD dissertation.
+	\textsc{anla} \ANLAlink{TL962L1991}.
+	\begin{itemize}
+	\item	\FIXME{Add description.}
+	\end{itemize}
+\item	Nyman, Elizabeth \&\ Leer, Jeff.
+	1993.
+	\textit{Gágiwduł.àt: Brought forth to reconfirm. The legacy of a Taku River
+		Tlingit clan}.
+	xxxii + 261 pp.
+	Fairbanks: \textsc{anlc}.
+	\textsc{isbn} 1-55500-048-7.
+	\textsc{lcccn} E99.T6 N94 1993.
+	\FIXME{links?}
+	\begin{itemize}
+	\item	Collection of six oral narratives with facing page English translations
+		from \fm{Seidaayaa} Elizabeth Nyman of Atlin.
+		Represents the only sizable published collection of material from this variety.
+		Most texts are mythology and oral history, but texts IV and V are rare
+		published examples of personal history.
+		Includes index and genealogical charts as well as colour plates of places
+		in the Taku River valley.
+		Orthography is distinct, being a system developed by Jeff Leer for the
+		the Yukon Native Language Centre; cf.\ Leer et al.\ 2001.
+	\end{itemize}
+\item	Maddieson, Ian, Caroline Smith, \&\ Nicola Bessell.
+	2001
+	Aspects of the phonetics of Tlingit.
+	\textit{Anthropological Linguistics} 43.2: 135–176.
+	41 pp.
+	\textsc{Jstor} \JSTORlink{30028779}.
+	\begin{itemize}
+	\item	Instrumental phonetic study of Tlingit.
+		Data include impressionistic transcription, acoustic analysis of audio
+		recordings, and intraoral air pressure measurements (aerodynamics and
+		manometry).
+		Data limited to speakers of coastal Northern Tlingit (Juneau, Sitka, etc.)
+		Consonant and vowel inventories, contrastive patterns and minimal pairs.
+		Confirms existence of ejective fricatives (≠ glottalized fricatives),
+		VOT of aspiration, lack of contrastive voicing on stops, lack of aspiration
+		on syllable-final (coda) stops, and unbalanced skew of vowel distribution in
+		acoustic space (F1/F2).
+	\end{itemize}
+\item	Leer, Jeff; Hitch, Doug; \&\ Ritter, John.
+	2001.
+	\textit{Interior Tlingit noun dictionary: The dialects spoken by Tlingit elders
+		of Carcross and Teslin, Yukon, and Atlin, British Columbia}.
+	xii + 487 pp.
+	Whitehorse YT: Yukon Native Language Centre.
+	\textsc{isbn} 1-55242-227-5.
+	\FIXME{links?}
+	\begin{itemize}
+	\item	Dictionary of nouns organized by semantic domain with Tlingit and English
+		finder lists.
+		Tracks differences between the Teslin, Carcross/Tagish, and Atlin varieties.
+		Includes lists of nouns compatible with different classificatory verbs.
+		Uses the orthography developed by Jeff Leer for the Yukon Native Language
+		Centre, cf.\ Nyman \&\ Leer 1993.
+	\end{itemize}
+\item	Dauenhauer, Nora Marks; Dauenhauer, Richard; \&\ Black, Lydia.
+	2008.
+	\textit{Anóoshi Lingít Aaní ká: Russians in Tlingit America
+		– the battles of Sitka, 1802 and 1804}.
+	xlix + 491 pp.
+	(Classics of Tlingit oral literature vol.\ 4).
+	Seattle: Univ.\ of Washington Press.
+	\textsc{isbn} 978-0-295-98601-2.
+	\textsc{lcccn} E99.T6 A56 2008.
+	\FIXME{HathiTrust link}
+	\begin{itemize}
+	\item	Extensive ethnohistory of Tlingit-Russian contact and conflict up through
+		the early Russian colonial period in Alaska.
+		Includes oral narratives with English translations by
+		\fm{Íx̱tʼikʼ Éesh} A.P.\ Johnson, \fm{Kooxíchxʼ} Alex Andrews,
+		and \fm{Shx̱aastí} Sally Hopkins.
+		The narratives by Johnson are split across several sections of the book to
+		match the historical progression:
+		pp.\ 23–25, 115–122, 157–165, 167–169, 257–264, 265–272.
+		Inventory of Tlingit, Ahtna, Eyak, and Russian placenames with translations
+		and discussion (pp.\ 451–45) as well as glossary of terms (pp.\ 459–462).
+		Many historical documents from archives as well as sections by different
+		authors on historical issues.
+	\end{itemize}
+\item	Edwards, Keri.
+	2009.
+	\textit{Dictionary of Tlingit}.
+	612 pp.
+	Juneau: Sealaska Heritage Institute.
+	\textsc{isbn} 978-1-44-040127-5.
+	\textsc{anla} \ANLAlink{TL005E2009}.
+	\begin{itemize}
+	\item	Dictionary of Tlingit nouns and verbs with English–Tlingit reversal.
+		Verbs alphabetically ordered by root and stem.
+		First dictionary to adequately account for all lexical information needed
+		to fully conjugate verbs.
+		Less coverage than Story \&\ Naish 1973.
+	\end{itemize}
+\item	Cable, Seth.
+	2010.
+	\textit{The grammar of Q: Q-particles, wh-movement and pied-piping}.
+	xiv + 249 pp.
+	(Oxford studies in comparative syntax no.\ 24).
+	Oxford: Oxford Univ.\ Press.
+	\textsc{isbn} 978-0-19-539226-5.
+	\textsc{lcccn} P299.I57C33 2010.
+	\begin{itemize}
+	\item	\FIXME{Add description.}
+	\end{itemize}
+\item	Thornton, Thomas F.
+	2012.
+	\textit{Haa léelkʼw has aaní saaxʼú: Our grandparents’ names on the land}.
+	xxiii + 232 pp.
+	Seattle: Univ.\ of Washington Press.
+	\textsc{isbn} 978-0-295-98858-0.
+	\textsc{lcccn} E99.T6 H2185 2012.
+	\FIXME{links?}
+	\begin{itemize}
+	\item	Ethnogeography of southeast Alaska, including all of coastal Tlingit territory.
+		Compiled from fieldwork and from various published and unpublished sources.
+		Several thousand placenames, nearly all given in modern orthography with
+		reliable translations.
+	\end{itemize}
+\item	Eggleston, Keri.
+	2013.
+	\textit{575 Tlingit verbs: A study of Tlingit verb paradigms}.
+	2 vols. 
+	xvi + 221 pp \&\ 1114 pp.
+	Fairbanks: Univ.\ of Alaska Fairbanks, PhD dissertation.
+	\textsc{anla} \ANLAlink{TL005E2013}.
+	\begin{itemize}
+	\item	Description of Tlingit verb morphology based on Leer 1991 with some
+		additions and renaming of unusual terminology.
+		Accompanied by extensive listing of verb lexical entries conjugated for
+		a variety of aspects and persons.
+		Verb data extends beyond Edwards 2009 though less coverage 
+		Story \&\ Naish 1973.
+	\end{itemize}
+\item	Crippen, James A.
+	2019.
+	\textit{The syntax in Tlingit verbs}.
+	xxviii + 925 pp.
+	Vancouver: Univ.\ of British Columbia, PhD dissertation.
+	LingBuzz \LingBuzzlink{005047}.
+	\begin{itemize}
+	\item	Theoretical analysis of the Tlingit verb, arguing for a syntactic structure
+		based in the Minimalist Program.
+		Extensive documentation of all verbal morphology and phonology as well as
+		lexical patterns.
+		Includes appendices with dialectology, orthography, history of documentation,
+		historical issues, and stem variation phonology.
+	\end{itemize}
+\end{enumerate}
+
+\section{Eyak}\label{sec:eyak}
+
+The English name \fm{Eyak} is usually pronounced [\ipa{ˈʔi.jæk}]. \FIXME{details}
+
+Also known as: \fm{dAXhunhyuugaʼ} [\ipa{dəχ.hũʰ.juː.kaˀ}], \fm{iiyaaq} [\ipa{ʔiː.jaːq}]. Ugalentz, Ugalakhmiut. Russian Угаленцъ \fm{Ugalents″}, Угалахмютъ \fm{Ugalaxmjut″}.
+
+ISO 639-3 \texttt{eya}; Glottolog \texttt{eyak1241}.
+
+\begin{enumerate}
+\item	Krauss, Michael E.
+	1965.
+	Eyak: A preliminary report.
+	\textit{Canadian Journal of Linguistics} 10: 167–187.
+	10 pp.
+	\textsc{anla} \ANLAlink{CA961K1965b}.
+	\textsc{doi} \DOIlink{10.1017/S0008413100005648}.
+	\begin{itemize}
+	\item	Report on Krauss’s initial fieldwork and analysis of Eyak.
+		Reviews phoneme inventory, syllable structure, pronouns,
+		verb template, verb stem variation, and comparison with Dene.
+		Comments by Fang-Kuei Li and William Elmendorf at end.
+	\end{itemize}
+\item	Krauss, Michael E.
+	1970.
+	\textit{Eyak dictionary}.
+	vii + 2939 pp.
+	Unpublished typescript.
+	\textsc{anla} \ANLAlink{EY961K1970b}.
+	\begin{itemize}
+	\item	Comprehensive dictionary of Eyak.
+		Ordered by stem phonology with extensive subentries.
+		Very well organized but presentation is very compact with little
+		overt guidance.
+		Refers to the corpus of texts and notes in Krauss’s possession at the time;
+		needs to be correlated with the modern organization of Eyak materials at
+		\textsc{anla}.
+		Some hand annotations and a few corrections.
+	\end{itemize}
+\item	Krauss, Michael E.
+	1981.
+	\textit{Eyak morpheme list}.
+	54 pp.
+	Unpublished typescript.
+	\textsc{anla} \ANLAlink{EY961K1976}.
+	\begin{itemize}
+	\item	List of all morphemes attested in Krauss’s Eyak materials, ordered
+		phonologically.
+		Includes stems, prefixes, suffixes, and clitics.
+		A variety of hand annotations reflect use of the typescript for research.
+		Some entries have hand additions and corrections.
+	\end{itemize}
+\item	Krauss, Michael E.
+	2015.
+	\textit{Eyak grammar}.
+	ii + 687 pp.
+	Unpublished draft.
+	\textsc{anla} \ANLAlink{EY961K2015}.
+	\begin{itemize}
+	\item	Large but incomplete draft of a reference grammar for Eyak.
+		Phonology: phonemes, prosody, morphophonology, stem structure,
+		stem variation.
+		Morphology: categories, constraint against affix duplication, pronouns,
+		verb morphology, nominals, adjectives, numerals, negation, interrogatives.
+		Syntax: definiteness, word order, complementation, independent pronouns,
+		relativization, demonstratives and determiners, noun phrases, possession,
+		relative clauses, complex sentences, tense sequencing, nonverbal predication,
+		clitics, adverbs, exclamations.
+		Fully usable but difficult presentation; most data are given without
+		segmentation or glossing and never as numbered examples.
+		Discussion is often stream of consciousness.
+		Extensive notes for revision throughout.
+	\end{itemize}
+\end{enumerate}
+
+%%%
+%%% Alaskan
+%%%
+\section{Alaskan Dene}\label{sec:dene-alaska}
+
+The Alaskan Dene group of languages covers all of the Dene languages spoken in Alaska, including Upper Tanana and Hän which extend into Yukon Territory, and Gwichʼin which extends into Yukon and Northwest Territories.
+
+\subsection{Southcentral}\label{sec:dene-alaska-southcentral}
+
+The Southcentral group of Alaskan Dene languages comprises Denaʼina and Ahtna.
+These two languages are not mutually intelligible, but they are very similar in phonology, morphology, and syntax.
+They are often described as the two most conservative languages in the Dene family, although they share many conservative features with the Lower Yukon languages.
+
+\subsubsection{Denaʼina}\label{sec:denaina}
+
+The English name \fm{Denaʼina} is typically pronounced [\ipa{də.ˈnaɪ.nə}]. It is from Denaʼina \fm{denaʼina} [\ipa{tə.na.ʔi.na}] \~\ [\ipa{tə.nai.na}] ‘people’ (Tenenbaum 1978: 2) which is usually used as an endonym with \fm{qutʼana} [\ipa{qʰu.tʼa.na}] ‘people’ used more generally (Kari 1977: 88).
+
+Also known as: Tanaina through 1980s.
+Kinai, Kenaitze, Ougagliakmut, Tehanin-kutchin, K’naia-khotana, Ttynai.
+Russian Кенайский \fm{Kenajskij}.
+
+ISO 639-3 \texttt{tfn}; Glottolog \texttt{tana1298}.
+
+Reported dialects are (Kari 2007):
+\begin{itemize}
+\item	Upper Inlet: Eklutna, Knik, Susitna, Tyonek, Chickaloon, Sutton
+\item	Outer Inlet: Kenai, Kustatan, Seldovia
+\item	Iliamna: Pedro Bay, Old Iliamna, Lake Iliamna area
+\item	Inland: Nondalton, Lime Village
+\end{itemize}
+
+
+\begin{enumerate}
+\item	Kari, James.
+	1975.
+	The disjunct boundary in the Navajo and Tanaina verb prefix complexes.
+	\textit{IJAL} 41.4: 330–345.
+	15 pp.
+	\textsc{Jstor} \JSTORlink{1264556}.
+	\begin{itemize}
+	\item	Article establishing the disjunct/conjunct phonological domain boundary
+		with comparative evidence from Navajo and Denaʼina.
+		Includes details not available elsewhere on Denaʼina verb phonology
+		and first publication of Denaʼina verb template.
+	\end{itemize}
+\item	Kari, James.
+	1977a.
+	\textit{Denaʼina (Tanaina) noun dictionary}.
+	iii + 355 pp.
+	Fairbanks: \textsc{anlc}.
+	\begin{itemize}
+	\item	Noun dictionary organized by semantic category (topic).
+		Includes Denaʼina-English index (285–353).
+		Supersedes Kenai Denaʼina dictionary (Kari 1974) and Nondalton Denaʼina
+		dictionary (Tenenbaum 1975).
+	\end{itemize}
+\item	Kari, James.
+	1977b.
+	Linguistic diffusion between Tanaina and Ahtna.
+	\textit{IJAL} 43.4: 274–288.
+	14 pp.
+	\textsc{Jstor} \JSTORlink{1264460}.
+	\begin{itemize}
+	\item	Account and analysis of linguistic relationships between Denaʼina and Ahtna.
+		Discusses some phonological phenomena shared between neighbouring varieties
+		of the two languages and the context of social interactions between
+		communities.
+		Presented as a case study of linguistic interactions between Dene languages.
+	\end{itemize}
+\item	Tenenbaum, Joan M.
+	1978.
+	\textit{Morphology and semantics of the Tanaina verb}.
+	ix + 251 pp.
+	New York: Columbia University, PhD dissertation.
+	\textsc{anla} \ANLAlink{TI973T1977}.
+	\begin{itemize}
+	\item	Description of verb morphology in Denaʼina.
+		Includes discussions of verb stem variation, inflectional morphology,
+		derivational morphology.
+		Short analyzed text at end.
+		Based on Tenenbaum’s fieldwork with Nondalton speakers.
+	\end{itemize}
+\item	Kari, James \&\ Fall, James A.
+	2003.
+	\textit{Shem Pete’s Alaska: The territory of the Upper Cook Inlet Denaʼina}.
+	2nd edn.
+	xxii + 392 pp.
+	Fairbanks: Univ.\ of Alaska Press.
+	\textsc{isbn} 1-889963-56-9.
+	\textsc{lcccn} E99.T185S54 1987.
+	\begin{itemize}
+	\item	Extensive ethnogeography from Shem Pete, a celebrated Denaʼina culture
+		bearer.
+		Detailed and thoroughly illustrated accounts of many Denaʼina placenames
+		including interpretations, explanations, and associated histories.	
+	\end{itemize}
+\item	Tenenbaum, Joan M.
+	2006.
+	\textit{Denaʼina sukduʼa: traditional stories of the Tanaina Athabaskans}.
+	xvi + 272 pp.
+	3rd edn.
+	Fairbanks: \textsc{anlc}.
+	\textsc{isbn} 1-55500-090-8
+	\textsc{lcccn} E99.T185 D46 2006.
+	\begin{itemize}
+	\item	Collection of 24 oral narratives transcribed by Joan Tenenbaum with the
+		assistance of Antone Evan and Peter Trefon Sr.
+		Texts are arranged in breath groups with facing page translations by
+		Mary Jane McGrath.
+		Narratives are arranged into four categories of \fm{Sukdu} (traditional
+		stories), \fm{Chulyin Sukduʼa} (Raven stories), \fm{Dghiliqʼ Sukduʼa}
+		(Mountain Stories), and \fm{Nantuset Kughun Nil Tʼqulʼan Qegh Nuhqulnix}
+		(Stories of the Wars They Had Before Our Time).
+		Includes CD with audio recordings of some but not all texts.
+		Review by Lovick (2009; \textsc{Jstor} \JSTORlink{598209}).
+	\end{itemize}
+\item	Kari, James.
+	2007.
+	\textit{Denaʼina topical dictionary}.
+	XX pp.
+	Fairbanks: \textsc{anlc}.
+	\textsc{isbn} 978-1-55500-091-2.
+	\textsc{lcccn} PM2412.Z5K37 2007.
+	\begin{itemize}
+	\item	Noun dictionary organized by semantic category (topic).
+		Supersedes Kari 1977a.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Ahtna}\label{sec:ahtna}
+
+The English name \fm{Ahtna} is typically pronounced [\ipa{ˈʔɑt.nə}]. It is from Ahtna \fm{ʼAtnaʼ} [\ipa{ʔat.naʔ}] which refers to the Copper River (Kari 1990: 82).
+
+Also known as: Ahtena through 1980s.
+Atnah, Copper, Copper River, Ketschet-naer, Atakhtan, Atnaxthynné, Nehaunee, Yellowknives.
+Russian Медновский \fm{Mednovskiy}.
+
+ISO 639-3 \texttt{aht}, Glottolog \texttt{ahte1237}.
+
+Reported dialects are (Kari 1990):
+\begin{itemize}
+\item	Lower: Chitina, Lower Tonsina, Taral, some in Copper Center
+\item	Central: Wood Camp, Copper Center, Tazlina, Glenallen, Dry Creek, Gulkana,
+	Gakona, Chistochina, Ewan Lake, Charley/Crosswind Lake
+\item	Upper (Mentasta): Batzulnetas, Suslota, Mentasta
+\item	Western: Chickaloon, Sutton, Mendeltna, Talkeetna, Cantwell, Valdez Creek,
+	Tyone Village
+\end{itemize}
+
+\begin{enumerate}
+\item	Kari, James.
+	1979.
+	\textit{Athabaskan verb theme categories: Ahtna}.
+	230 pp.
+	(\textsc{anlc} research papers no.\ 2).
+	Fairbanks: \textsc{anlc}.
+	\begin{itemize}
+	\item	Description and analysis of lexical aspect categories in Ahtna with
+		application to other Dene languages.
+		Comparison is mostly limited to Navajo.
+		Forms the primary basis for the analysis of lexical entries and
+		lexical aspect phenomena in most subsequent work on Dene languages.
+	\end{itemize}
+\item	Kari, James.
+	1990.
+	\textit{Ahtna Athabaskan dictionary}.
+	xi + 702 pp.
+	Fairbanks: \textsc{anlc}.
+	\textsc{isbn} 1-55500-033-9.
+	\textsc{lcccn} PM580.Z5K37 1990.
+	\textsc{anla} \ANLAlink{AT973K1990}.
+	\begin{itemize}
+	\item	Comprehensive dictionary of Ahtna.
+		Includes short accounts of phonology, dialectology, and verb morphology.
+		Ahtna-English primary entries with English-Ahtna finderlist
+		and a list of words from previous sources that were not verified by Kari.
+		Appendices on loanwords, directionals, numerals, verb theme strings,
+		aspectual and non-aspectual derivations, verb phonology, sample verb
+		paradigms, and kinship terms.
+		Map of dialects p.\ 21, orthography chart p.\ 12.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Lower Yukon}\label{sec:dene-alaska-lower}
+
+The Lower Yukon group of languages covers the languages spoken along the lower reaches of the Yukon River and along the Innoko and Kuskokwim Rivers.
+See Krauss’s essay “Koyukon dialectology and its relationship to other Athabaskan langauges” in the \textit{Koyukon Athabaskan Dictionary} (Jetté \&\ Jones 2000: l–lxv) for their distinct features and relationships in the context of comparison with Koyukon and the other Alaskan Dene languages.
+
+\subsubsection{Deg Xinag}\label{sec:degxinag}
+
+The English name \fm{Deg Xinag} is typically pronounced [\ipa{ˌdɛɡ.hɪ.ˈnɑg}]. It is from Deg Xinag \FIXME{details}.
+
+Also known as: \fm{Deg Hitʼan}, \fm{Deg Xitʼan}.
+*Ingalik through 1908s.
+*Ingalit, Kaiyuhkhotana, Inkülüchlüaten, Ulukakhotana.
+The names “Ingalik” and “Ingalit” are from Central Yupʼik terms, e.g. \fm{Ingqiliq} ‘Indian’, and are considered pejorative.
+
+ISO 639-3 \texttt{ing}, Glottolog \texttt{dege1248}.
+
+\subsubsection{Upper Kuskokwim}\label{sec:upperkuskokwim}
+
+The English name \fm{Upper Kuskokwim} is typically pronounced [\ipa{ˈʌ.pɝ ˈkʌs.kə.ˌkwɪm}]. It is from the Kuskokwim River \FIXME{details}.
+
+Also known as: Kolchan, Goltsan, McGrath Ingalik.
+
+ISO 639-3 \texttt{kuu}, Glottolog \texttt{uppe1438}.
+
+\subsubsection{Holikachuk}\label{sec:holikachuk}
+
+Krauss provided the name Holikachuk but since this village is now abandoned (the population moved to Grayling), he wished that he had used “Innoko” after the river instead.
+
+Also known as: Innoko.
+
+ISO 639-3 \texttt{hoi}, Glottolog \texttt{holi1241}.
+
+\subsubsection{Koyukon}\label{sec:koyukon}
+
+The English name \fm{Koyukon} is pronounced variously as  [\ipa{ˈkɑ.ju.ˌkɑn}], [\ipa{ˈkʌ.ju.ˌkɑn}], or [\ipa{ˈko.ju.ˌkɑn}].
+It is derived from a Russian adjective Куюканцы \fm{Kujukantsy} from the name Куюкак \fm{Kujukak} applied to the Koyukuk River, thence from Inupiaq \fm{Kuuyukaq} or Yupik \fm{Kuiyukaq} of unclear meaning (Krauss in Jetté \&\ Jones 2000: l).
+The endonym for the language is \fm{Denaakkʼe} meaning ‘like us’ (Jetté \&\ Jones 2000: 355).
+
+Also known as: \fm{Denaakkʼe} [\ipa{tənaːqʼə}], Tenʼa, Coyukon, Coyoukon, Koyukukhotana, Ketlitk-Kutchin, Koyukuns.
+Russian Куюканцы \fm{Kujukantsy}.
+
+ISO 639-3 \texttt{koy}, Glottolog \texttt{koyu1237}.
+
+Reported dialects are (Krauss in Jetté \&\ Jones 2000: liii):
+\begin{itemize}
+\item	Lower: Kaltag, Nulato
+\item	Central (Koyukuk): Koyukuk, Huslia, Galena, Ruby, Tanana, Rampart, Hughes, Allakaket
+\item	Upper: Tanana, Crossjacket, Manley, Rampart, Stevens Village, Beaver,
+	Allakaket, Toklat, Bearpaw, Minchumina.
+\end{itemize}
+
+\begin{enumerate}
+\item	Axelrod, Melissa.
+	1993.
+	The semantics of time: Aspectual categorization in Koyukon Athabaskan.
+	Lincoln, NE: University of Nebraska Press.
+\item	Jetté, Jules \&\ Jones, Eliza.
+	2000.
+	\textit{Koyukon Athabaskan dictionary}.
+	xciv + 1118 pp.
+	Fairbanks: \textsc{anlc}.
+	\textsc{isbn} 1-55500-063-0.
+	\textsc{lcccn} PM1594.Z5 J47 2000.
+	\textsc{anla} \ANLAlink{KO898JJ2000}.
+	\begin{itemize}
+	\item	Comprehensive dictionary of Koyukon.
+		Koyukon-English primary entries with English-Koyukon finderlist and
+		word-initial alphabetical Koyukon index.
+		Introduction includes biographies, dialectology, and history.
+		Appendices cover verb morphology, classificatory verbs, derivational
+		strings, verb paradigms, pronouns and demonstratives, directionals,
+		numerals, kinship terms, loanwords, flora and fauna.
+		Overview map p.\ xlix, orthography charts p.\ lxvi.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Tanana Valley}\label{sec:dene-alaska-tanana}
+
+The Tanana Valley group is a single dialect chain along the Tanana River that drains into the Yukon River.
+As noted in the Tanana section below, there is considerable difficulty in delineating language divisions, but a three way split into (Lower) Tanana, Tanacross, and Upper Tanana has become conventional over the last 30 years.
+Tanana shares some features with neighbouring Koyukon varieties, and Upper Tanana shares some features with neighbouring Ahtna varieties.
+
+\subsubsection{Tanana}\label{sec:tanana}
+
+The English name \fm{Tanana} is pronounced as [\ipa{ˈtæ.nə.ˌnɒ}].
+
+Also known as: Lower Tanana, Minto, Nenana, Unakhotana, Yukonikhotana, Inkülüchlüaten, Tenan-kutchin, Gens de Buttes, Kolchaina.
+
+“Definition of the Lower Tanana langauge as such is probably the most arbitrary and problematical sociolinguistic decision that must be made in delimiting Alaska Athabaskan languages” (Krauss \&\ Golla 1981).
+Krauss (p.c.\ 2010) says that Ives Goddard insisted on adding “Lower” to the name though there is no “Lower Tanana” river contrasting with the Upper Tanana River.
+Specialists often refer to particular communities rather than to the language as whole.
+Kari has argued that Salcha-Goodpaster is a distinct language he labels Middle Tanana because it collapsed PD \fm[*]{ts} and \fm[*]{tʂ} to \fm{ts} unlike Minto-Nenana but like Chena.
+
+	
+Reported dialects are:
+\begin{itemize}
+\item	Chena: Chena Village [\ipa{tʃʼenɔʔ}]
+\item	Minto-Nenana: Minto [\ipa{men̥ti}], Tolovana, Nenana [\ipa{ninanɔʔ}], Toklat
+\item	Salcha-Goodpaster: Salcha [\ipa{sɔltʃʰaket}], Goodpaster
+\end{itemize}
+
+\begin{enumerate}
+\item	Tuttle, Siri.
+	1998.
+	\textit{Metrical and tonal structures in Tanana Athabaskan}.
+	Seattle: University of Washington, PhD dissertation.
+	\textsc{anla} \ANLAlink{TN990T1998b}.
+	\begin{itemize}
+	\item	Investigation of relationships between stress, tone, and intonation
+		in the Minto and Salcha dialects of Tanana.
+		Minto is reported to have low tone from PD constriction where Salcha
+		does not have tone.
+		Acoustic correlates of stress also differ between the dialects, where
+		Salcha has increased pitch but Minto does not.
+		Includes data on instrumental measurements of duration, pitch, and amplitude.
+		Chapters on segments, noun and verb morphology summaries, tone, stress, and
+		syllable structure.
+		Supervised by Sharon Hargus.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Tanacross}\label{sec:tanacross}
+
+The English name \fm{Koyukon} is pronounced as [\ipa{ˈtæ.nə.ˌkɹɑs}].
+It is a blend of \fm{Tanana} and \fm{across}.
+
+Previously analyzed as dialects of the (Lower) Tanana language, now considered to be too different from Tanana to be the same language.
+
+ISO 639-3 \texttt{tcb}, Glottolog \texttt{tana1290}.
+
+Reported dialects are:
+\begin{itemize}
+\item	Healy Lake–Joseph Village: Healy Lake, Dot Lake, Joseph Village
+\item	Mansfield-Ketchumstuk: Mansfield Lake, Ketchumstuk, Tanacross Village
+\end{itemize}
+
+\begin{enumerate}
+\item	Holton, Gary.
+	2000.
+	\textit{The phonology and morphology of the Tanacross Athabaskan language}.
+	xxvii + 353 pp.
+	Santa Barbara CA: University of California Santa Barbara, PhD dissertation.
+	\textsc{anla} \ANLAlink{TC997H2000c}.
+	\begin{itemize}
+	\item	Description of phonology, noun morphology, verb morphology, and
+		“minor word classes” in Tanacross.
+		Reflex of PD contriction is reported as high tone which is unique in Alaska.
+		Tone system is said to be relatively elaborate.
+		Appendices on orthography, verb paradigms, segmented and glossed text,
+		and short lexicon of nouns and verbs.
+		Supervised by Marianne Mithun.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Upper Tanana}\label{sec:utanana}
+
+ISO 639-3 \texttt{tau}, Glottolog \texttt{uppe1437}.
+
+
+\begin{enumerate}
+\item	Lovick, Olga.
+	2020.
+	\textit{A grammar of Upper Tanana, volume 1: Phonology, lexical classes, morphology}.
+	xlvii + 651 pp.
+	Lincoln, NE: University of Nebraska Press.
+	\textsc{isbn} 978-1-496-21315-0.
+	\textsc{lcccn} PM641.Z9 U67 2019.
+	\begin{itemize}
+	\item	First volume of comprehensive description of Upper Tanana grammar.
+		Language and cultural background, dialectology.
+		Phonology of consonants, vowels, tone, syllable structure, metrical
+		structure, orthography, and historical issues.
+		Lexical categories described are nouns, verbs, postpositions, adverbs,
+		directionals, adjectives and modifiers, pronouns, numerals, and “minor
+		word categories” (nonverbal predication, interjections, function words).
+		Morphology covers possession, postposition inflection, and very detailed
+		chapters on all verb morphology classes.
+	\end{itemize}
+\end{enumerate}
+
+
+\subsection{Upper Yukon}\label{sec:dene-cord-upper}
+
+\subsubsection{Gwichʼin}\label{sec:gwichin}
+
+\subsubsection{Hän}\label{sec:han}
+
+%%%
+%%% Cordillera
+%%%
+\section{Cordillera Dene}\label{sec:dene-cord}
+
+\subsection{Tutchone}\label{sec:dene-cord-tutchone}
+
+\subsubsection{Northern Tutchone}\label{sec:ntutchone}
+
+Also known as: Selkirk, Pelly, Gens de Foux (“Crow People”), Tutchone-kutchin, Koltchanes, Galzanes, Titlogat.
+
+ISO 639-3 \texttt{ttm}, Glottolog \texttt{nort2941}.
+
+\subsubsection{Southern Tutchone}\label{sec:stutchone}
+
+Also known as: Kluane, Champagne, Burwash.
+
+ISO 639-3 \texttt{tce}, Glottolog \texttt{sout2957}.
+
+\subsection{Headwaters}\label{sec:dene-cord-headwaters}
+
+The Headwaters languages are so named because they encompass the headwaters of a number of large river systems, specifically the Yukon, Pelly, Liard, Taku, Stikine, Unuk, and Nass Rivers.
+Other labels for this group include “Western Canadian” including Sekani (Krauss 1973: 914), “Nahanni” or “Tahltan-Tagish-Kaska” (Mithun 1999: 346), and “Yukon” together with Tutchone, Sekani, and Beaver (Leer in Tuttle \&\ Hargus 2004).
+All of these languages are in contact with Tlingit so bilingualism with that language is common, but any effects of this language contact beyond loanwords seem to be limited to Tagish and Tahltan.
+
+\subsubsection{Tagish}\label{sec:tagish}
+
+ISO 639-3 \texttt{tgx}, Glottolog \texttt{tagi1240}.
+
+
+\subsubsection{Tahltan}\label{sec:tahltan}
+
+ISO 639-3 \texttt{tht}, Glottolog \texttt{tahl1239}.
+
+\begin{enumerate}
+\item	Cook, Eung-Do.
+	1972.
+	Stress and related rules in Tahltan.
+	\textit{IJAL} 38.4: 231–233.
+	3 pp.
+	\textsc{Jstor} \JSTORlink{1264300}.
+	\begin{itemize}
+	\item	Short paper documenting basic stress patterns in Tahltan.
+		Offers an informal statement of
+		(a) stress every noun or verb stem,
+		(b) stress the first syllable of every particle,
+		(c) stress every other affix syllable counting the first one
+			nearest the stem (p.\ 232).
+		Also notes pitch assignment correlated with stress.
+	\end{itemize}
+\item	Hardwick, Margaret.
+	1984b.
+	\textit{Tahltan morphology and phonology}.
+	Toronto: Univ.\ of Toronto, master’s thesis.
+\item	Bob, Tanya.
+	1999.
+	\textit{Laryngeal phenomena in Tahltan}.
+	Vancouver: Univ.\ of British Columbia, PhD dissertation.
+	\begin{itemize}
+	\item	Investigation of phonetics and phonology of laryngeal phenomena
+		(aspiration, voicing, ejectivity), segment structure, and syllable structure.
+		Includes instrumental phonetic measurements and theoretical analysis
+		of phenomena in Optimality Theory.
+	\end{itemize}
+\item	Alderete, John.
+	2005.
+	On tone and length in Tahltan (Northern Athabaskan).
+	In \textit{Athabaskan prosody}, Sharon Hargus \&\ Keren Rice (eds.),
+	pp.\ 185–208.
+	23 pp.
+	(Current issues in linguistic theory vol.\ 269).
+	Amsterdam: John Benjamins.
+	\textsc{isbn} 90-272-4783-8.
+	\textsc{lcccn} PM641.W67 2005.
+	\textsc{doi} \DOIlink{10.1075/cilt.269}.
+	\begin{itemize}
+	\item	Description and analysis of tone and length with instrumental measurements
+		of minimal pairs.
+		Also discusses tone and its phonetic correlates.
+		Argues that Tahltan developed low tone from PD constriction but that there
+		is now a three way contrast between short, long, and low tone extra-long
+		where tone may be undergoing replacement by length.
+	\end{itemize}
+\item	Alderete, John \&\ Bob, Tanya.
+	2005.
+	A corpus-based approach to Tahltan stress.
+	In \textit{Athabaskan prosody}, Sharon Hargus \&\ Keren Rice (eds.),
+	pp.\ 369-391.
+	22 pp.
+	(Current issues in linguistic theory vol.\ 269).
+	Amsterdam: John Benjamins.
+	\textsc{isbn} 90-272-4783-8.
+	\textsc{lcccn} PM641.W67 2005.
+	\textsc{doi} \DOIlink{10.1075/cilt.269}.
+	\begin{itemize}
+	\item	Analysis of stress patterns from a corpus of audio recordings.
+		Discusses the necessity of distinguishing primary and secondary stress,
+		and concludes that stress assignment is driven primarily by morphological
+		rather than phonological factors, particularly stress assignment to the stem.
+	\end{itemize}
+\item	Nater, Hank F.
+	2006.
+	Athabascan verb stem structure: Tahltan.
+	In \textit{What’s in a verb? Studies in the verbal morphology of languages of
+		the Americas},
+	Grażyna J.\ Rowicka, \&\ Eithne B.\ Carlin (eds.), pp.\ 29–52.
+	23 pp.
+	(LOT Publications occasional series vol.\ 5).
+	Utrecht: LOT Publications.
+	\textsc{isbn} 978-90-76864-94-5.
+	\textsc{hdl} \HDLlink{1874/296557}.
+\item	Alderete, John \&\ McIlwraith, Thomas.
+	2008.
+	An annotated bibliography of Tahltan language materials.
+	\textit{Northwest Journal of Linguistics} 2.1: 1–26.
+	26 pp.
+	\begin{itemize}
+	\item	Annotated bibliography of select materials on Tahltan as well as
+		some materials on neighbouring groups (Tsetsaut, Kaska).
+		Includes linguistic articles, textual analysis of narratives,
+		dictionaries, and grammatical sketches.
+		Materials that do not include linguistic description are excluded.
+		Annotations are relatively detailed, some several paragraphs.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Kaska}\label{sec:kaska}
+
+ISO 639-3 \texttt{kkz}, Glottolog \texttt{kask1239}.
+
+\begin{enumerate}
+\item	Moore, Patrick.
+	2002.
+	\textit{Point of view in Kaska historical narratives}.
+	xxi + 908 pp.
+	Bloomington IN: Indiana University, PhD dissertation.
+	\begin{itemize}
+	\item	Study of linguistic and cultural issues in Kaska narrative,
+		with 13 chapters on Kaska grammar.
+		Covers sound system, lexical categories, nouns, pronouns, noun modifiers,
+		postpositions, directionals, adverbs, numerals, particles, conjunctions,
+		verb morphology, and the aspect/mode system.
+		17 interlinear glossed texts from seven narrators.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Tsetsaut}\label{sec:tsetsaut}
+
+The English name Tsetsaut is typically pronounced [\ipa{tsɛt.ˈsaʊt}] or [\ipa{sɛt.ˈsaʊt}].
+This is from a Nisg̱aʼa word \fm{jitsʼaawit} that Franz Boas recorded as \fm{tsʼᴇtsʼā′ut} [\ipa{tsʼə.ˈtsʼaː.ut}] meaning roughly ‘those of the interior’ (Duff 1981: 456).
+Their endonym was probably \fm{wətał} [\ipa{wə.tʰa(ː)ɬ}] (Emmons 1911: 23); \fm{wə-} is likely the areal prefix and for the \fm{tał} portion compare Tahltan \fm{Tāłtān} [\ipa{tʰaːɬ.tʰaːn}] and Tlingit \fm{Taalḵú} [\ipa{tʰàːɬ.qʷʰú}] ‘Thomas Bay’ as well as possibly Galice \fm{Ta·ldaš} [\ipa{tʰaːl.taʃ}].
+
+Also known as: Tsʼᴇtsʼā′ut, Tsʼetsʼaut, Tsetsʼaut, Tsits Zaouns (error for “Tsits Zaouts”?), Wetalth, Tseco to tinneh.
+
+ISO 639-3 \texttt{txc}; Glottolog \texttt{tset1236}.
+
+The published materials listed here are close to exhaustive for Tsetsaut language documentation, though see Duff 1981 for some references to ethnographic materials not included here.
+
+\begin{enumerate}
+\item	Boas, Franz.
+	1894.
+	Nisga field notes.
+	Unpublished manuscripts.
+	\textsc{anla} \ANLAlink{TS886B1894a}.
+	\begin{itemize}
+	\item	Field notes by Boas in 1894–1895 while visiting the Nisg̱aʼa village of
+		Ging̱olx (Kincolith) at the mouth of the Nass River.
+		Includes all his Tsetsaut materials; see \textsc{anla} description for details.
+		Better digital copies may now be available from the American Philosophical
+		Society or Smithsonian archives.
+	\end{itemize}
+\item	Boas, Franz.
+	1896.
+	Traditions of the Tsʼᴇtsʼā′ut: I.
+	\textit{The Journal of American Folklore} 9.35: 257–268.
+	11 pp.
+	\textsc{Jstor} \JSTORlink{534113}.
+	\textsc{doi} \DOIlink{10.2307/534113}.
+	\begin{itemize}
+	\item	Nine stories (nos.\ 1–9) collected by Boas in 1894–1895.
+		Contains some Tsetsaut names and vocabulary as well as occasional Tlingit
+		words and phrases.
+	\end{itemize}
+\item	Boas, Franz.
+	1897.
+	Traditions of the Tsʼᴇtsʼā′ut: II.
+	\textit{The Journal of American Folklore} 10.36: 35–48.
+	13 pp.
+	\textsc{Jstor} \JSTORlink{533847}.
+	\textsc{doi} \DOIlink{10.2307/533847}.
+	\begin{itemize}
+	\item	Nine stories (nos.\ 10–19) collected by Boas in 1894–1895.
+		Contains some Tsetsaut names and vocabulary as well as occasional Tlingit
+		words and phrases.
+		Ends with a comment about predecessors called \fm{tsʼakʼê′} and \fm{futvūdʼiê′}
+		as well as the mention of an omitted Tlingit land otter story.
+	\end{itemize}
+\item	Boas, Franz \&\ Goddard, Pliny Earle.
+	1924.
+	Tsʼetsʼaut: An Athapascan language from Portland Canal, British Columbia.
+	\textit{IJAL} 3.1: 1–35.
+	34 pp.
+	\textsc{Jstor} \JSTORlink{1263158}.
+	\textsc{anla} \ANLAlink{CA920G1924}.
+	\begin{itemize}
+	\item	Linguistic material collected by Franz Boas in 1894–1895.
+		Includes a vocabulary (pp.\ 4–34) and glossed text (pp.\ 34–35).
+		See \textsc{anla} description for a few additional notes.
+	\end{itemize}
+\item	Emmons, George T.
+	1911.
+	\textit{The Tahltan Indians}.
+	(University Museum anthropological publications vol.\ 4 no.\ 1).
+	120 pp. 
+	Philadelphia: University of Pennsylvania.
+	\textsc{lcccn} E99.T12 E5 1911.
+	Archive.org \ArchiveOrglink{tahltanindians00emmouoft}.
+	\begin{itemize}
+	\item	Ethnography of the Tahltan.
+		Includes a discussion of the Tsetsaut under “The Portland Canal People”
+		(pp.\ 21–23) which features several names including an endonym “Wetalth”
+		which is probably \fm{wətał} [\ipa{wə.tʰa(ː)ɬ}] and a Tahltan exonym
+		“Tseco to tinneh”.
+	\end{itemize}
+\item	Krauss, Michael E.\ \&\ Hawkins, Donna L.
+	1972.
+	Notes on Tsetsaut.
+	Unpublished manuscripts.
+	\textsc{anla} \ANLAlink{CA961K1972}.
+	\begin{itemize}
+	\item	Manuscript notes and commentary by Krauss, correspondence with Tharp in
+		1964, and manuscript by Hawkins.
+	\end{itemize}
+\item	Tharp, George W.
+	1972.
+	The position of Tsetsaut among Northern Athapaskans.
+	\textit{IJAL} 38.1: 14–25.
+	11 pp.
+	\textsc{Jstor} \JSTORlink{1264498}.
+	\begin{itemize}
+	\item	Discussion of linguistic evidence for the historical relationship of Tsetsaut
+		with other Dene languages.
+		Presented as a rebuttal to Hoijer’s (1963) claim that Tsetsaut is not documented
+		enough to determine its historical relationships.
+		Reviews probable sound changes explaining Tsetsaut’s remarkable phonology,
+		citing Krauss 1964 for the connection between Tsetsaut labials and PD
+		labialized/retroflex consonants.
+		Argues for a close link between Tsetsaut and Tahltan, though see Duff 1981
+		for arguments supporting a closer link to Kaska.
+	\end{itemize}
+\item	Duff, Wilson.
+	1981.
+	Tsetsaut.
+	In \textit{Handbook of North American Indians: Subarctic},
+	June Helm (ed.), pp.\ 454–457.
+	3 pp.
+	(Handbook of North American Indians vol.\ 6).
+	Washington DC: Smithsonian Institution Press.
+	\textsc{isbn} 0-16-004578-9.
+	\textsc{lcccn} E77.H25 vol.\ 6.
+	\begin{itemize}
+	\item	Ethnographic discussion of the Tsetsaut from all available sources.
+		Argues that they were more closely related to the Kaska than the Tahltan
+		and discusses relationships with the Nisg̱aʼa, Gitksan, Tlingit, and Sekani.
+		Includes some names and vocabulary as well as clarification of terms in
+		other languages.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Central BC}\label{sec:dene-cord-cbc}
+
+\subsubsection{Tsekʼehne (Sekani)}\label{sec:sekani}
+
+ISO 639-3 \texttt{sek}, Glottolog \texttt{seka1250}.
+
+\begin{enumerate}
+\item	Hargus, Sharon.
+	1988.
+	\textit{The lexical phonology of Sekani}.
+	xv + 346 pp.
+	(Outstanding dissertations in linguistics).
+	New York: Garland Publishing.
+	\textsc{isbn} 0-8240-5187-4.
+	\textsc{lcccn} PM2285.H37 1988.
+	\begin{itemize}
+	\item	Revised version of Univ.\ of California Los Angeles PhD dissertation (1985).
+		Detailed analysis of word-level phonology.
+		Includes comprehensive inventory of verb affixes (ch.\ 3) and
+		details on noun morphology including possession, compounding, and
+		suffixation (ch.\ 4).
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Witsuwitʼen}\label{sec:witsuwiten}
+
+ISO 639-3 \texttt{bcr}, Glottolog \texttt{babi1235}.
+
+\begin{enumerate}
+\item	Hargus, Sharon.
+	2007.
+	\textit{Witsuwitʼen grammar: Phonetics, phonology, morphology}.
+	xv + 837 pp.
+	(First Nations languages vol.\ 4).
+	Vancouver: Univ.\ of British Columbia Press.
+	\textsc{isbn} 978-0-7748-1382-2.
+	\textsc{lcccn} PM664.H37 2007.
+\end{enumerate}
+
+\subsubsection{Dakelh (Carrier)}\label{sec:carrier}
+
+ISO 639-3 \texttt{crx}/\texttt{caf}, Glottolog \texttt{carr1248}/\texttt{sout2958}.
+
+\subsubsection{Tsilhqútʼin (Chilcotin)}\label{sec:chilcotin}
+
+ISO 639-3 \texttt{clc}, Glottolog \texttt{chil1280}.
+
+\begin{enumerate}
+\item	Andrews, Christina.
+	1988.
+	\textit{Lexical phonology of Chilcotin}.
+	ix + 151 pp.
+	Vancouver: Univ.\ of British Columbia, master’s thesis.
+	\begin{itemize}
+	\item	Analysis of word-level phonology.
+		Data from five speakers.
+		Documents sound inventory, syllable structure, sketches verbal morphology.
+		Details ‘flattening’ (pharyngealization) and associated harmony
+		processes (ch.\ 2).
+	\end{itemize}
+\item	Cook, Eung-Do.
+	2013.
+	\textit{A Tsilhqútʼín grammar}.
+	xxii + 647 pp.
+	(First Nations Languages vol.\ 6).
+	Vancouver: Univ.\ of British Columbia Press.
+	\textsc{isbn} 978-0-7748-2516-0.
+	\textsc{lcccn} PM641.Z9B7 2013.
+\end{enumerate}
+
+\subsubsection{Nicola}\label{sec:nicola}
+
+The English name \fm{Nicola} is usually pronounced [\ipa{ˈnɪ.koʊ.lɑ}].
+It is from the Nicola River which is itself from the English name of a local leader, from French \fm{Nicolas} [\ipa{nɪ.ko.ˈlɑ}].
+Their endonyms are unknown; see Wyatt 1998 for more discussion.
+
+Also known as: Stā-wih-a-muh, Smîlê′kamu\textsc{q}, Sᴇi′lᴇqamu\textsc{q}, Sa-milk-a-nuigh; see Wyatt 1998 for more details.
+
+ISO 639-3 (none), Glottolog \texttt{nico1265}.
+
+The Nicola language is probably the most poorly documented language of the Dene family.
+The scanty data available indicate that it was a Dene language, but little more can be said beyond that.
+The Nicola people were absorbed into the Nlaka'pamux (Thompson) people and the last speaker probably died around 1890.
+“The ethnographic and linguistic work that followed tells little about the Nicola, for it came too late” (Wyatt 1998: 230).
+It is tempting to connect Nicola with Chilcotin given their geographic proximity and there are repeated suggestions of this in the literature (Krauss 1973 “Na-Dene”: 919), “but the pathetic data are not adequate so far to substantiate this” (Krauss 1979 “Na-Dene and Eskimo-Aleut”: 869).
+
+\begin{enumerate}
+\item	Boas, Franz.
+	1924.
+	Vocabulary of the Athapascan tribe of Nicola Valley, British Columbia.
+	\textit{IJAL} 3.1: 36–38.`
+	3 pp.
+	\textsc{Jstor} \JSTORlink{1263159}.
+	\begin{itemize}
+	\item	Compilation of words collected by J.W.\ Mackay, George Dawson, and James Teit
+		with comparison to Chilcotin and Carrier forms collected by Boas.
+		“I am inclined to think that there was a difference between the Chilcotin and
+		the Nicola Valley dialects. The language was, however, evidently very closely
+		related to the Chilcotin, while it differed more from the Carrier dialects.”
+		(p.\ 38).
+		Boas’s compiled data are nearly comprehensive for the total documentation
+		of Nicola, although Wyatt (1998) refers to data from Harrington (1943) and
+		“there is a little Teit Nicola material in the American Philosophical Society
+		Library that is not included in Boas’s article” (Krauss 1973: 919).
+	\end{itemize}
+\item	Krauss, Michael E.
+	1973.
+	Na-Dene.
+	In \textit{Linguistics in North America},
+	Thomas A. Sebeok (ed.), pp.\ 903–978.
+	75 pp.
+	(Current trends in linguistics vol.\ 10).
+	The Hague: Mouton de Gruyter.
+	\textsc{lcccn} P25.S4 vol.\ 10.
+	\textsc{anla} \ANLAlink{CA961K1973}.
+	\begin{itemize}
+	\item	Discussion of Nicola data from Teit and Harrington (p.\ 919).
+		Mentions loss of “Merrit, B.C.” box of Harrington’s materials.
+	\end{itemize}
+\item	Krauss, Michael E.
+	1979.
+	Na-Dene and Eskimo-Aleut.
+	In \textit{The languages of Native America: Historical and comparative assessment},
+	Lyle Campbell \& Marianne Mithun (eds.), pp.\ 803–901;
+	Na-Dene on pp.\ 838–901.
+	52 pp.\ + 10 pp.\ endnotes.
+	Austin: University of Texas Press.
+	\textsc{isbn} 0-292-74624-5.
+	\textsc{lcccn} PM108.L35.
+	\textsc{anla} \ANLAlink{CA961KG1981}.
+	\begin{itemize}
+	\item	Discussion of Nicola data pp.\ 868–869.
+		Notes that the “Merrit, B.C.” box of Harrington’s materials was recovered,
+		but that it contributes mostly ethnographic material with “little of new value”
+		for linguistic study.
+	\end{itemize}
+\item	Wyatt, David.
+	1998.
+	Nicola.
+	In \textit{Handbook of North American Indians: Plateau}, Deward E.\ Walker Jr.\ (ed.),
+	pp.\ 220–222.
+	3 pp.
+	(Handbook of North American Indians vol.\ 12).
+	Washington DC: Smithsonian Institution Press.
+	\textsc{isbn} 0-14-049514-8.
+	\textsc{lcccn} E77.H25 vol.\ 12.
+	\begin{itemize}
+	\item	Summary of ethnographic information on the Nicola people.
+		Provides references to all of the first-hand documentation of Nicola as well
+		as quotations and discussion of origins, culture, history, and synonymy.
+	\end{itemize}
+\end{enumerate}
+
+%%%
+%%% Pacific Coast
+%%%
+\section{Pacific Coast}\label{sec:pacific}
+
+The Pacific Coast Dene group is conventionally divided into three subgroups.
+One consists of the Kwalhioqua-Tlatskanai language in Washington and Oregon on opposite sides of the lower Columbia River west of the Willamette River.
+Another is the Oregon group that extends from the Umpqua River to just past the California border.
+The third is the California group that extends from just south of the Klamath River to the Mendocino area.
+
+The three groups of languages are “sharply distinguished from one another by extensive phonological, grammatical, and lexical differences and share few common innovations beyond a general tendency to simplify and restructure inherited features” (Golla 2011: 69).
+As such, although the Pacific Coast Dene languages form a well defined geographic group, they cannot be straightforwardly classed as a single genealogically related subgroup of the family.
+Golla suggests that they may descend from separate groups with a common hsitory of southward migration from Canada.
+
+Golla (1977: 20 fn.\ 1) notes that the Oregon and California groups show an interesting parallelism in geographic and linguistic distribution.
+Each group has a central river valley – the Rogue River in Oregon and the Eel River in California – which has a dialect chain running along it.
+Each of these two chains is bounded on both north and south by distinct languages that show influence from neighbouring non-Dene languages.
+The Oregon and California groups seem to be linguistically distinct, but it is still unclear whether they represent historical subgroups and this may be impossible to conclusively determine given the lack of documentation for some of the languages.
+
+Because there is so little documentation on most of the Pacific Coast Dene languages, the breadth of materials listed is greater in this section.
+In particular, most wordlists from the 19th century are included as well as unpublished field notes, lexical materials, and file slips by early 20th century linguists.
+A number of ethnographic sources have also been included here because they contain linguistic information that is otherwise difficult to access.
+
+\begin{enumerate}
+\item	Golla, Victor.
+	2011.
+	\textit{California Indian languages}.
+	xiv + 380 pp.
+	Berkeley: Univ.\ of California Press.
+	\textsc{isbn} 978-0-520-26667-4.
+	\textsc{lcccn} PM501.C2G65 2011.
+	\textsc{doi} \DOIlink{10.1525/9780520949522}.
+	\textsc{Jstor} \JSTORlink{10.1525/j.ctt1ppmrt}.
+	Project MUSE \MUSElink{book/26243}.
+	\begin{itemize}
+	\item	Sections 3.4–3.7 (pp.\ 68–82) discuss Pacific Coast Dene languages.
+		Offers detailed documentation histories for each language which
+		has been a major influence on this section.
+		Naming and etymological sources of names given.
+		Subgroupings of languages given though without much data or discussion
+		of distinctive features.
+		Two maps with language and dialect divisions.
+		Includes a sketch of linguistic structure and a short reconstruction
+		of Proto-Oregon Dene.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Kwalhioqua-Tlatskanai}\label{sec:kt}
+
+The English name Kwalhioqua is pronounced either [\ipa{ˌkwɑl.hi.ˈoʊ.kwə}] or [\ipa{ˌkwɑl.haɪ.ˈoʊ.kwə}], and Tlatskanai is [\ipa{ˈklæts.kə.naɪ}] according to Michael Krauss, both following typical local pronunciations of placenames.
+Both names are borrowings from Chinook, namely \fm{tkʷlxiugʷáikš} (meaning uncertain) and \fm{iłátskʼani} ‘those of the region of small oaks’; also compare Upper Chehalis \fm{qʼʷaláwts} and \fm{łátsʼqənəyu} and Tillamook \fm{tłétsʼqnáyu} (Krauss 1990: 532).
+Their own endonyms are unknown; see Krauss 1990 for more discussion.
+
+Also known as: Tlatskanie, Clatskanie, Willapa, Willoopah, Owilapsh, Suwal, Lower Columbia Athabaskan.
+
+ISO 639-3 \texttt{qwt}; Glottolog \texttt{kwal1258}.
+
+Kwalhioqua-Tlatskanai is poorly documented and seems to have faded relatively early in comparison to other Pacific Coast Dene languages.
+Krauss made an extensive effort from the early 1960s onward to compile all known materials on Kwalhioqua-Tlatskanai.
+The Kwalhioqua group resided north of the Columbia River in modern Washington state and the Tlatskanai group south of the Columbia River in modern Oregon.
+The two groups were divided by the Cathlamet Chinookan people along the Columbia River.
+
+The two named varieties apparently do not correspond to any dialect differences: “The vocabulary attested for Kwalhioqua and Clatskanie is sufficient to show that they were a single language and shows no consistent differences between the two.” (Krauss 1990: 530).
+There were probably distinct varieties of some kind, but the details are obscure (Golla 2011: 69).
+Krauss identifies a subdivision among the Kwalhioqua between the Willapa [\ipa{ˈwɪ.lə.pə}] on the Willapa River and the Suwal [\ipa{sə.ˈwɑl}] on the upper Chehalis (Krauss 1990: 530).
+The Tlatskanai reportedly migrated from the Skookumchuck River across the Columbia, so “Suwal speech may have been as close or closer to Clatskanie than it was to Willapa” (Krauss 1990: 530).
+Hale notes “a connexion of some kind” with the Upper Umpqua people but offers no further details (Hale 1846: 204); this may be factual or may be influenced by his belief that the Kwalihioqua and Tlatskanai were necessarily connected to the Upper Umpqua because of their languages (Krauss 1990: 530).
+
+Krauss (1979: 870) argues that Kwalhioqua-Tlatskanai is not directly related to the other Pacific Coast Dene languages and may be more closely related to Witsuwitʼen.
+He highlights the unusual evolution of the first person singular subject PD \fm[*]{sh-} with the \fm[*]{l-} classifier prefix combining as \fm{gə} in Koyukon and \fm{g} in Witsuwitʼen and Kwalhioqua-Tlatskanai as setting it apart from the other languages to the south; see Krauss 1977a “Proto-Athabaskan-Eyak fricatives and the first person singular” for detailed discussion.
+
+\begin{enumerate}
+\item	Hale, Horatio.
+	1846.
+	\textit{Ethnography and philology}.
+	Vol.\ 6 of \textit{United States Exploring Expedition during the years of 1838, 1839,
+		1840, 1841, 1842 under the command of Charles Wilkes}.
+	Philadelphia: C.\ Sherman.
+	\textsc{doi} \DOIlink{10.5479/sil.266433.39088000956565}.
+	Archive.org \ArchiveOrglink{Ethnographyphil00Hale}.
+	\begin{itemize}
+	\item	Vocabularies pp.\ 570–629 with key to abbreviations on p.\ 569.
+		Kwalihioqua-Tlatskanai is listed as “1.B.” throughout.
+		Discussion on pp.\ 534–535.
+	\end{itemize}
+\item	Boas, Franz \&\ Goddard, Pliny Earle.
+	1924.
+	Vocabulary of an Athapascan dialect of the State of Washington.
+	\textit{IJAL} 3.1: 39–45.
+	6 pp.
+	\textsc{Jstor} \JSTORlink{1263160}.
+	\begin{itemize}
+	\item	Wordlist of 322 items assembled from several sources compiled by James Teit.
+		Includes discussions quoted from Gibbs and Teit.
+		Boas notes that the manuscript and corrected proofs of an accompanying
+		article by Teit were lost.
+		This publication is “marred by unreliable editing” (Golla 2011: 70) so
+		the original sources should be consulted.
+	\end{itemize}
+\item	Krauss, Michael E.
+	1961.
+	Kwalhioqua-Tlatskanai materials.
+	10 boxes.
+	\textsc{anla} \ANLAlink{PC-K-T}.
+	\begin{itemize}
+	\item	Copies of archival materials collected by Krauss starting in the early 1960s.
+		Includes finding aid by Krauss written in 1996 and by Krauss and Wendy Camber
+		written in 2013.
+		Also includes drafts of an unpublished manuscript by Krauss.
+		Represents essentially all recoverable material on the K-T language.
+	\end{itemize}
+\item	Seaburg, William R.
+	1982.
+	\textit{Guide to Pacific Northwest Native American materials in the Mellville Jacobs
+		collection and in other archival collections in the University of Washington
+		libraries}.
+	v + 113 pp.
+	(University of Washington libraries communications in librarianship no.\ 2).
+	Seattle: University of Washington.
+	\textsc{lcccn} Z1209.2.N77 S4 1982.
+	\textsc{hdl} \HDLlink{1773/46688}.
+	\begin{itemize}
+	\item	P.\ 15 lists material collected by Melville Jacobs and Elizabeth D.\ Jacobs
+		from Clara Pearson in Garibaldi OR, January 1934.
+		Also copies of notes by George Gibbs and by Leo J.\ Frachtenberg.
+		These are now in the University of Washington Libraries Special Collections.
+	\end{itemize}
+\item	Krauss, Michael E.
+	1990.
+	Kwalhioqua and Clatskanie.
+	In \textit{Handbook of North American Indians: Northwest Coast}, pp.\ 530–532.
+	3 pp.
+	(Handbook of North American Indians vol.\ 7).
+	Washington DC: Smithsonian.
+	\textsc{isbn} 0-16-004574-6.
+	\textsc{lcccn} E77.H25 vol.\ 7.
+	\begin{itemize}
+	\item	Ethnography based on all historical materials.
+		Discusses territory and environment, external relations, history of
+		documentation, synonyms, and sources of information.
+		Includes linguistic discussion of names in neighbouring languages
+		(Chinook, Upper Chehalis, Cowlitz, Tillamook, Kalapuya).
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Oregon Dene}\label{sec:pacific-oregon}
+
+The Oregon Dene languages are so called because their traditional territories fall within the modern state of Oregon, though the Chetco and Tolowa peoples and the Upper Rogue River peoples on the Illinois River extended across the California border (Miller \&\ Seaburg 1990: 581; Golla 2011: 71).
+Upper Umpqua and Chetco-Tolowa are distinct languages, but the remainder of the Oregon Dene languages were probably a complex network of dialects following the various river valleys (Golla 2011: 70).
+The Oregon Dene languages were originally surrounded by several unrelated languages: Siuslaw (Lower Umpqua, Hanis Coos, Miluk Coos), Kalapuya, Molala, Takelma, Shasa, Karuk, and Yurok.
+The Rogue River Wars of the 1850s ended with the Oregon Dene peoples resettled into distant reservations along with all the other indigenous inhabitants of southwest Oregon.
+Most documentation of the Oregon Dene languages comes from speakers after this period of resettlement.
+
+\begin{enumerate}
+\item	Pierce, Joe E.\ \&\ Ryherd, James M.
+	1964.
+	The status of Athapaskan research in Oregon.
+	\textit{IJAL} 30.2: 137–143.
+	7 pp.
+	\textsc{Jstor} \JSTORlink{1263481}.
+	\begin{itemize}
+	\item	Report on Dene language communities in Oregon.
+		Based primarily on older sources and so serves as a bibliography.
+		Speculates on linguistic relationships between named varieties and reports on
+		historical populations and movements.
+		Mentions fieldwork with individuals but provides no data.
+	\end{itemize}
+\item	Seaburg, William R.
+	1982.
+	\textit{Guide to Pacific Northwest Native American materials in the Mellville Jacobs
+		collection and in other archival collections in the University of Washington
+		libraries}.
+	v + 113 pp.
+	(University of Washington libraries communications in librarianship no.\ 2).
+	Seattle: University of Washington.
+	\textsc{lcccn} Z1209.2.N77 S4 1982.
+	\textsc{hdl} \HDLlink{1773/46688}.
+	\begin{itemize}
+	\item	Catalogue of materials collected by Melville Jacobs, Elizabeth D.\ Jacobs,
+		and others which are now in the University of Washington Libraries Special
+		Collections.
+		References to field notes, lexical files, texts and translations,
+		recordings, and copies of published and unpublished materials.
+		Covers all of the Oregon Dene languages as well as Lassik (California Dene),
+		Kwalhioqua-Tlatskanai (Clatskanie), and Upper Tanana.
+	\end{itemize}
+\item	Miller, Jay \&\ William R.\ Seaburg.
+	1990.
+	Athapaskans of southwestern Oregon.
+	In \textit{Handbook of North American Indians: Subarctic},
+	Wayne Suttles (ed.), pp. 580–588.
+	9 pp.
+	(Handbook of North American Indians vol.\ 7).
+	Washington DC: Smithsonian Institution Press.
+	\textsc{isbn} 0-16-004574-6.
+	\textsc{lcccn} E77.H25 vol.\ 7.
+	\begin{itemize}
+	\item	Ethnography of the Oregon Dene groups.
+		Includes some discussion of languages as well as a section on ethnonyms and
+		various etymologies of names.
+		References to many published and unpublished materials.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Upper Umpqua}\label{sec:umpqua}
+
+The English name \fm{Umpqua} is generally pronounced [\ipa{ˈʌmp.kwə}].
+This is from the name of the Umpqua River, from Tututni \fm{ąkwa} [\ipa{ʔã.kʷa}] (Bright 2004: 530).
+“Lower Umpqua” is a variety of the unrelated Siuslaw language.
+
+ISO 639-3 \texttt{xup}; Glottolog \texttt{uppe1436}.
+
+Golla says that “Upper Umpqua tends to preserve older forms and thus tends to bear a superficially closer resemblance to the California Athabaskan languages” (Golla 2011: 71).
+There is very little documentation of Upper Umpqua (Golla 2011: 70–72), consisting mostly of wordlists collected in the 19th century.
+The most accurate materials from fieldwork by Elizabeth Jacobs and J.P.\ Harrington are in archives.
+
+\begin{enumerate}
+\item	Scouler, John.
+	1841.
+	Observations on the indigenous tribes of the North West Coast of America.
+	\textit{Journal of the Royal Geographical Society of London} 11: 215–251.
+	\textsc{doi} \DOIlink{10.2307/1797647}.
+	\textsc{Jstor} \JSTORlink{1797647}.
+	\begin{itemize}
+	\item	Vocabulary of “Umpqua, Spoken on River Umpqua” pp.\ 237–241.
+		Collected by William F.\ Tolmie, probably in 1840 (Golla 2011: 71).
+	\end{itemize}
+\item	Hale, Horatio.
+	1846.
+	\textit{Ethnography and philology}.
+	Vol.\ 6 of \textit{United States Exploring Expedition during the years of 1838, 1839,
+		1840, 1841, 1842 under the command of Charles Wilkes}.
+	Philadelphia: C.\ Sherman.
+	\textsc{doi} \DOIlink{10.5479/sil.266433.39088000956565}.
+	Archive.org \ArchiveOrglink{Ethnographyphil00Hale}.
+	\begin{itemize}
+	\item	Vocabularies pp.\ 570–629 with key to abbreviations on p.\ 569.
+		Upper Umpqua is listed as “1.C.” throughout.
+		Discussion on pp.\ 534–535.
+	\end{itemize}
+\item	Milhau, John J.
+	1856.
+	\textit{Vocabularies of Umpqua Valley (proper) Oregon}.
+	6 pp.
+	Washington DC: Smithsonian Institution, National Anthropological Archives.
+	\textsc{naa} \SOVAlink{NAA.MS193}.
+	\begin{itemize}
+	\item	Vocabulary of 192 items.
+	\end{itemize}
+\item	Barnhardt, W.H.
+	1859.
+	\textit{Comparative vocabulary of the languages spoken by the ‘Umpqua’,
+		‘Lower Rogue River’, and ‘Calapooia’ tribes of Indians, May 1859.}
+	35 pp.
+	Washington DC: Smithsonian Institution, National Anthropological Archives.
+	\textsc{naa} \SOVAlink{NAA.MS218}.
+	\begin{itemize}
+	\item	Vocabulary of 170 items.
+	\end{itemize}
+\item	Gatchet, Albert S.
+	1877.
+	\textit{Umpqua vocabulary, recorded at Grande Ronde Indian Reservation, Polk Co.,
+		Oregon, Dec.\ 30, 1877}.
+	35 pp.
+	Washington DC: Smithsonian Institution, National Anthropological Archives.		
+	\textsc{naa} \SOVAlink{NAA.MS76}.
+	\begin{itemize}
+	\item	Vocabulary of 410 items.
+	\end{itemize}
+\item	Dorsey, James Owen.
+	1884.
+	Various materials in “Series 2: Siletz Reservation”, boxes 59–63 in
+	James O.\ Dorsey papers.
+	\textsc{naa} \SOVAlink{NAA.MS4800}.
+	\begin{itemize}
+	\item	Several dated and undated documents in this collection include data from
+		Upper Umpqua, usually in the context of materials on the Kuitsh dialect of
+		Siuslaw (“Lower Umpqua”).
+	\end{itemize}
+\item	Sturtevant, William C.
+	1987.
+	\textit{Documentation of Upper Umpqua}.
+	(William C.\ Sturtevant papers, series 2, research files 2.13, box 251).
+	Washington DC: Smithsonian Institution, National Anthropological Archives.
+	\textsc{naa} \SOVAlink{NAA.2008-24\#ref7752}.
+	\begin{itemize}
+	\item	\FIXME{needs review}
+	\end{itemize}
+\item	Seaburg, William R.
+	1982.
+	\textit{Guide to Pacific Northwest Native American materials in the Mellville Jacobs
+		collection and in other archival collections in the University of Washington
+		libraries}.
+	v + 113 pp.
+	(University of Washington libraries communications in librarianship no.\ 2).
+	Seattle: University of Washington.
+	\textsc{lcccn} Z1209.2.N77 S4 1982.
+	\textsc{hdl} \HDLlink{1773/46688}.
+	\begin{itemize}
+	\item	P.\ 18 lists one notebook (26 pp.)\ of texts and
+		ethnographic notes by Elizabeth D.\ Jacobs from Mrs.\ Jerden at Grand Ronde OR,
+		1935.
+		Comment states these are primarily in English.
+		These are now in the University of Washington Libraries Special Collections.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Upper Coquille}\label{sec:coquille}
+
+The English name \fm{Coquille} is usually pronounced either [\ipa{koʊ.ˈkwɛl}] or [\ipa{koʊ.ˈkil}].
+The spelling reflects French \fm{coquille} ‘shell’ but it is probably from an unidentified indigenous ethnonym or place name (Bright 2004: 122).
+The endonym for the speech community is \fm{miši-kʷət-meʔ-təne} ‘Mishi Creek people’ (Golla 2011: 72). 
+
+Also known as: Coquille, Coquelle, Upper Coquelle.
+
+ISO 639-3 \texttt{coq}; Glottolog \texttt{coqu1236}.
+
+Golla (2011: 72) suggests that Upper Coquille is a relatively distinct variety of a more general Rogue River Athabaskan that also includes the Lower Rogue River languages and the Upper Rogue River languages.
+Upper Coquille is sometimes lumped together with Tututni, Chasta Costa, and the other Lower Rogue River languages.
+Most extant documentation of Upper Coquille is from Coquelle Thompson (Golla 2011: 72).
+
+\begin{enumerate}
+\item	Seaburg, William R.
+	1982.
+	\textit{Guide to Pacific Northwest Native American materials in the Mellville Jacobs
+		collection and in other archival collections in the University of Washington
+		libraries}.
+	v + 113 pp.
+	(University of Washington libraries communications in librarianship no.\ 2).
+	Seattle: University of Washington.
+	\textsc{lcccn} Z1209.2.N77 S4 1982.
+	\textsc{hdl} \HDLlink{1773/46688}.
+	\begin{itemize}
+	\item	P.\ 18 lists four notebooks, 26 pp.\ of fieldnotes by Elizabeth D.\ Jacobs
+		from Coquelle Thompson at Siletz, 1935.
+		Also 93 pp.\ of English narratives, for which see Youst \&\ Seaburg 2002
+		and Seaburg \&\ Jacobs 2007.
+		These are now in the University of Washington Libraries Special Collections.
+	\end{itemize}
+\item	Seaburg, William R.
+	1994.
+	\textit{Collecting culture: The practice and ideology of salvage ethnography in
+		western Oregon, 1877–1942}.
+	vi + 313 pp.
+	Seattle: Univ.\ of Washington, PhD dissertation.
+\item	Youst, Lionel \&\ Seaburg, William R.
+	2002.
+	\textit{Coquelle Thompson, Athabaskan witness: A cultural biography}.
+	Norman, OK: Univ.\ of Oklahoma Press.
+\item	Seaburg, William R. \&\ Jacobs, Elizabeth D.
+	2007.
+	\textit{Pitch Woman and other stories: The oral traditions of Coquelle Thompson,
+		Upper Coquille Athabaskan Indian}.
+	xviii + 309 pp.
+	Lincoln, NE: Univ.\ of Nebraska Press.
+	\textsc{isbn} 978-0-8032-4333-0.
+	\textsc{lcccn} E99.C8742T4693 2007.
+	\begin{itemize}
+	\item	Narratives from Coquelle Thompson collected by Elizabeth D.\ Jacobs in 1935.
+		Accompanied by a detailed introduction covering the personal history of both
+		people, a sketch ethnography of Upper Coquille culture, and an analysis of
+		narrative performance style.
+		The vast majority of the texts are in English, but there are occasional
+		Upper Coquille words scattered throughout.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Lower Rogue River languages}\label{sec:pacific-oregon-lowerrogue}
+
+\paragraph{Tututni and Joshua}\label{sec:tututni}
+
+\begin{enumerate}
+\item	Seaburg, William R.
+	1982.
+	\textit{Guide to Pacific Northwest Native American materials in the Mellville Jacobs
+		collection and in other archival collections in the University of Washington
+		libraries}.
+	v + 113 pp.
+	(University of Washington libraries communications in librarianship no.\ 2).
+	Seattle: University of Washington.
+	\textsc{lcccn} Z1209.2.N77 S4 1982.
+	\textsc{hdl} \HDLlink{1773/46688}.
+	\begin{itemize}
+	\item	P.\ 17 lists three notebooks and one box of circa 1200 slip files by
+		Elizabeth D.\ Jacobs on Tututni from Ida Baker and Mrs.\ Albert in
+		Portland and Siletz, 1934–1935.
+		Also grammatical analysis by Elizabeth D.\ Jacobs interleaved in a copy of
+		P.E.\ Goddard’s sketch grammar of Hupa with notes keyed to section numbers in
+		Goddard’s work.
+		These are now in the University of Washington Libraries Special Collections.
+	\end{itemize}
+\end{enumerate}
+
+\paragraph{Chasta Costa}\label{sec:chastacosta}
+
+The English name Chasta Costa is pronounced [\ipa{ˈʃæs.tə ˈkɑs.tə}].
+It is derived from \fm{Cista q!wᴀ́sta} [\ipa{ʃis.ta ˈkʼwəs.ta}] which seems to be a placename of uncertain etymology (Sapir 1914: 274).
+According to Golla it is “associated with tribelet located at the confluence of Illinois River and Rogue River about twenty miles upstream from Dutudun, near the present-day town of Agness” (Golla 2011: 73).
+
+\begin{enumerate}
+\item	Sapir, Edward.
+	1914.
+	\textit{Notes on Chasta Costa phonology and morphology}.
+	Pp.\ 271–340 in University Museum anthropological publications vol.\ 11, no.\ 2.
+	69 pp.
+	Archive.org \ArchiveOrglink{cu31924027107741}.
+	\begin{itemize}
+	\item	Report on Sapir’s fieldwork with Wolverton Orton, a speaker of Chasta Costa
+		with whom he resided in the summer of 1906 while doing fieldwork on Takelma.
+		Good phonetic detail with syllabification indicated by slashes in transcription.
+		Morphology includes details on verb structure with a template.
+		Interlinear translated text (pp.\ 335–338) and appendix with Galice vocabulary
+		from Mrs.\ Punzie and Applegate vocabulary from Rogue River Jack.
+	\end{itemize}
+\item	Seaburg, William R.
+	1982.
+	\textit{Guide to Pacific Northwest Native American materials in the Mellville Jacobs
+		collection and in other archival collections in the University of Washington
+		libraries}.
+	v + 113 pp.
+	(University of Washington libraries communications in librarianship no.\ 2).
+	Seattle: University of Washington.
+	\textsc{lcccn} Z1209.2.N77 S4 1982.
+	\textsc{hdl} \HDLlink{1773/46688}.
+	\begin{itemize}
+	\item	P.\ 15 lists one notebook by Melville Jacobs with Chasta Costa material
+		from Jake Orten and Bensel Orten in Siletz, January 1928.
+		“Notebook 33, pp.\ 13–31 and 39–48”.
+		These are now in the University of Washington Libraries Special Collections.
+	\end{itemize}
+\end{enumerate}
+
+\paragraph{Euchre Creek}\label{sec:euchrecreek}
+
+\paragraph{Sixes River}\label{sec:sixesriver}
+
+\paragraph{Pistol River}\label{sec:pistolriver}
+
+\subsubsection{Upper Rogue River languages}\label{sec:pacific-oregon-upperrogue}
+
+The Upper Rogue River languages are distinct from Upper Umpqua and Chetco-Tolowa, but were plausibly part of a larger dialect network including Upper Coquille and the Lower Rogue River languages (Golla 2011: 70).
+The documentary record treats Galice and Applegate separately, but they were likely varieties of the same language.
+A third variety Nabiltse was reported by Gibbs which Golla sees as a conservative variety close to Applegate (Golla 2011: 72).
+These three languages or language varieties – Galice, Applegate, and Nabiltse – are distinguished from the Lower Rogue River languages by some phonological differences such as denasalization of /m/ and /n/ (Golla 2011: 72). 
+
+\paragraph{Galice}\label{sec:galice}
+
+The English name \textit{Galice} is usually pronounced [\ipa{ga.ˈlis}].
+Bright (2004: 153) says this is perhaps from a French name \fm{Galice}, but notes that Hoxie Simmons said it was a native pronunciation of English \fm{Kelly’s}.
+The home village of the speech community was called \fm{Ta·ldaš} [\ipa{tʰaltaʃ}].
+
+\begin{enumerate}
+\item	Dorsey
+	1884c.
+\item	Sapir, Edward.
+	1914.
+	\textit{Notes on Chasta Costa phonology and morphology}.
+	Pp.\ 271–340 in University Museum anthropological publications vol.\ 11, no.\ 2.
+	69 pp.
+	Archive.org \ArchiveOrglink{cu31924027107741}.
+	\begin{itemize}
+	\item	Report on Sapir’s fieldwork with Wolverton Orton, a speaker of Chasta Costa
+		with whom he resided in the summer of 1906 while doing fieldwork on Takelma.
+		Good phonetic detail with syllabification indicated by slashes in transcription.
+		Morphology includes details on verb structure with a template.
+		Interlinear translated text (pp.\ 335–338) and appendix with Galice vocabulary
+		from Mrs.\ Punzie and Applegate vocabulary from Rogue River Jack.
+	\end{itemize}
+\item	Hoijer, Harry.
+	1966.
+	Galice Athapaskan: A grammatical sketch.
+	\textit{IJAL} 32.4: 320–327
+	7 pp.
+	\textsc{Jstor} \JSTORlink{1264086}.
+	\begin{itemize}
+	\item	Sketch of Galice phonology and morphology.
+		Data from fieldwork with Hoxie Simmons by Hoijer (1956) and Melville Jacobs
+		(1933–1934).
+		Describes phoneme inventory, syllable structure, affixation, possession,
+		basic verb morphology.
+	\end{itemize}
+\item	Seaburg, William R.
+	1982.
+	\textit{Guide to Pacific Northwest Native American materials in the Mellville Jacobs
+		collection and in other archival collections in the University of Washington
+		libraries}.
+	v + 113 pp.
+	(University of Washington libraries communications in librarianship no.\ 2).
+	Seattle: University of Washington.
+	\textsc{lcccn} Z1209.2.N77 S4 1982.
+	\textsc{hdl} \HDLlink{1773/46688}.
+	\begin{itemize}
+	\item	Pp. 15–17 details all materials collected by Melville Jacobs and Elizabeth
+		D.\ Jacobs from Hoxie Simmons including notebooks, file slips, translations,
+		and audio recordings in 1935, 1938, 1939
+		Cites circa 600 pp.\ of notebook pages.
+		Also lists two notebooks by Harry Hoijer in 1956 also from Hoxie Simmons and
+		three notebooks from P.E.\ Goddard in 1903–1904 from an unidentified consultant.
+	\end{itemize}
+\end{enumerate}
+
+\paragraph{Applegate}\label{sec:applegate}
+
+\begin{enumerate}
+\item	Sapir, Edward.
+	1914.
+	\textit{Notes on Chasta Costa phonology and morphology}.
+	Pp.\ 271–340 in University Museum anthropological publications vol.\ 11, no.\ 2.
+	69 pp.
+	Archive.org \ArchiveOrglink{cu31924027107741}.
+	\begin{itemize}
+	\item	Report on Sapir’s fieldwork with Wolverton Orton, a speaker of Chasta Costa
+		with whom he resided in the summer of 1906 while doing fieldwork on Takelma.
+		Good phonetic detail with syllabification indicated by slashes in transcription.
+		Morphology includes details on verb structure with a template.
+		Interlinear translated text (pp.\ 335–338) and appendix with Galice vocabulary
+		from Mrs.\ Punzie and Applegate vocabulary from Rogue River Jack.
+	\end{itemize}
+\end{enumerate}
+
+\paragraph{Nabiltse}\label{sec:nabiltse}
+
+\subsubsection{Chetco and Tolowa}\label{sec:chetcotolowa}
+
+The English name \fm{Chetco} is usually pronounced [\ipa{ˈtʃɛt.koʊ}] and the name \fm{Tolowa} is usually [\ipa{ˈtɑ.lɑ.wə}].
+
+Golla considers Chetco and Tolowa to be the same language with two different “shallowly differentiated local varieties” (Golla 2011: 74).
+Chetco is associated with the mouth of the Chetco River and neighbouring areas in Oregon, and Tolowa with the lower Smith River and neighbouring areas in California.
+Golla speculates that the differences between dialects may reflect social disruption due to the Oregon communities being forcibly relocated after the Rogue River War of 1855–1856.
+
+\begin{enumerate}
+\item	Jacobs, Elizabeth D.
+	1968.
+	A Chetco Athabaskan myth text from southwestern Oregon.
+	\textit{IJAL} 34.3: 192–193.
+	2 pp.
+	\textsc{Jstor} \JSTORlink{1263564}.
+	\begin{itemize}
+	\item	Another of seventeen texts from Billy Metcalf at Siletz, Oregon in 1935.
+		Short text and English translation, without analysis.
+		“A severely truncated version of a flood myth”.
+		Note transcription difference with Jacobs 1977.
+	\end{itemize}
+\item	Jacobs, Elizabeth D.
+	1977.
+	A Chetco Athabaskan text and translation.
+	\textit{IJAL} 43.4: 269–273.
+	5 pp.
+	\textsc{Jstor} \JSTORlink{1264459}.
+	\begin{itemize}
+	\item	Another of seventeen texts from Billy Metcalf at Siletz, Oregon in 1935.
+		Text with word-level glosses (not interlinear!)\ and English translation.
+		Jacobs speculates that slight differences in Metcalf’s speech are
+		influences from the predominant Tututni in his community.
+		Transcription is different from Jacobs 1968: “these and several other
+		orthographic changes better reflect the significant sounds in Mr.\ Metcalf’s
+		speech than the orthography employed in my first Chetco text publication”
+		(p.\ 269).
+	\end{itemize}
+\item	Bommelyn, Loren.
+	1997.
+	\textit{The prolegomena to the Tolowa Athabaskan grammar}.
+	viii + 65 pp.
+	Eugene OR: Univ.\ of Oregon, master’s thesis.
+	\begin{itemize}
+	\item	Description of phonology and morphology.
+		Phonology includes phoneme inventory and phonological processes (ch.\ 2).
+		Morphology addresses verb structure (ch.\ 3), classifiers (ch.\ 4), and
+		the pronominal system including \fm{y-}/\fm{b-} alternation (ch.\ 5).
+		Supervised by Talmy Givón.
+	\end{itemize}
+\item	Givón, Talmy \&\ Bommelyn, Loren.
+	2000.
+	The evolution of de-transitive voice in Tolowa Athabaskan.
+	\textit{Studies in Language} 24.1: 41–76.
+	35 pp.
+	\textsc{doi} \DOIlink{10.1075/sl.24.1.03giv}.
+	\begin{itemize}
+	\item	Description and analysis of transitivity alternations, emphasizing the
+		reduction or loss of argument structure (de-transitive voice).
+		Reconstructs its evolution in comparison with Thompson’s (1997)
+		analysis of \fm{d-} in Proto-Dene.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{California Dene}\label{sec:pacific-california}
+
+\subsubsection{Redwood languages}\label{sec:pacific-california-redwood}
+
+\paragraph{Hupa}\label{sec:hupa}
+
+\begin{enumerate}
+\item	Golla, Victor.
+	1964.
+	An etymological study of Hupa noun stems.
+	\textit{IJAL} 30.2: 108–117.
+	10 pp.
+	\textsc{Jstor} \JSTORlink{1263478}.
+\item	Golla, Victor.
+	1970.
+	\textit{Hupa grammar}.
+	xi + 311 pp.
+	Berkeley: Univ.\ of California Berkeley, PhD dissertation.
+\item	Golla, Victor.
+	1977a.
+	A note on Hupa verb stems.
+	\textit{IJAL} 43.4: 355–358.
+	3 pp.
+	\textsc{Jstor} \JSTORlink{1264468}.
+\item	Golla, Victor.
+	1977b.
+	Coyote and frog.
+	In \textit{Northern California texts}, Victor Golla \&\ Shirley Silver (eds.),
+	pp.\ 17–25.
+	9 pp.
+	(International Journal of American Linguistics, Native American texts series, vol.\ 2,
+		no.\ 2).
+	Chicago: Univ.\ of Chicago Press.
+	\textsc{lcccn} PM501.C2 N6.
+	\begin{itemize}
+	\item	Short text with interlinear gloss and free translation.
+		Recorded by Edward Sapir in 1927 from Emma Frank with interpretation by
+		Sam Brown.
+		Preceded by ethnographic discussion and accompanied by detailed notes.
+	\end{itemize}
+\item	Golla, Victor.
+	1996b.
+	Sketch of Hupa, an Athapaskan language.
+	In \textit{Handbook of North American Indians: Languages},
+	Ives Goddard (ed.),
+	pp.\ 364–389.
+	25 pp.
+	(Handbook of North American Indians vol.\ 17).
+	Washington DC: Smithsonian Press.
+	\textsc{isbn} 0-16-048774-9.
+	\textsc{lcccn} E77.H25 vol.\ 17.
+\item	Golla, Victor.
+	1996a.
+	\textit{Hupa language dictionary: Na:tinixwe Mixine:wheʼ}.
+	x + 110 pp.
+	2nd edn.
+	Hoopa CA: Hoopa Valley Tribal Council.
+	\textsc{hdl} \HDLlink{2148/48}.
+\end{enumerate}
+
+
+\paragraph{Chilula}\label{sec:chilula}
+
+\begin{enumerate}
+\item	Goddard, Pliny Earle.
+	1914.
+	\textit{Chilula texts}.
+	Pp.\ 289–379 in University of California Publications in American Archaeology
+		and Ethnology vol.\ 10, no.\ 7.
+	90 pp.
+	Berkeley: Univ.\ of California Press.
+	\textsc{lcccn} E51.C15 vol.\ 10, no.\ 7.
+\end{enumerate}
+
+\paragraph{Whilkut}\label{sec:whilkut}
+
+\subsubsection{Eel River languages}\label{sec:pacific-california-eelriver}
+
+\paragraph{Sinkyone}\label{sec:sinkyone}
+
+\paragraph{Nongatl}\label{sec:nongatl}
+
+\paragraph{Lassik}\label{sec:lassik}
+
+\begin{enumerate}
+\item	Seaburg, William R.
+	1982.
+	\textit{Guide to Pacific Northwest Native American materials in the Mellville Jacobs
+		collection and in other archival collections in the University of Washington
+		libraries}.
+	v + 113 pp.
+	(University of Washington libraries communications in librarianship no.\ 2).
+	Seattle: University of Washington.
+	\textsc{lcccn} Z1209.2.N77 S4 1982.
+	\textsc{hdl} \HDLlink{1773/46688}.
+	\begin{itemize}
+	\item	P.\ 17 lists four notebooks (220 pp.)\ given to Melville Jacobs by Gladys
+		Reichard, originally collected by P.E.\ Goddard from an unidentified
+		consultant in 1906.
+		These are now in the University of Washington Libraries Special Collections.
+	\end{itemize}
+\end{enumerate}
+
+\paragraph{Wailaki}\label{sec:wailaki}
+
+\begin{enumerate}
+\item	Seaburg, William R.
+	1977.
+	The man who married a grizzly girl.
+	In \textit{Northern California texts}, Victor Golla \&\ Shirley Silver (eds.),
+	pp.\ 114–120.
+	7 pp.
+	(International Journal of American Linguistics, Native American texts series, vol.\ 2,
+		no.\ 2).
+	Chicago: Univ.\ of Chicago Press.
+	\textsc{lcccn} PM501.C2 N6.
+	\begin{itemize}
+	\item	Short text with interlinear gloss and free translation.
+		Recorded by Fang-Kuei Li in 1927 from John Tip.
+		Preceded by historical discussion and accompanied by extensive grammatical
+		and comparative notes.
+	\end{itemize}
+\item	Begay, Kayla Rae.
+	2017.
+	\textit{Wailaki grammar}.
+	vii + 277 pp.
+	Berkeley: Univ.\ of California Berkeley, PhD dissertation.
+\end{enumerate}
+
+\subsubsection{Mattole and Bear River}\label{sec:mattole}
+
+\begin{enumerate}
+\item	Li, Fang-Kuei.
+	1930.
+	\textit{Mattole: An Athabaskan language}.
+	(University of Chicago publications in anthropology, linguistic series).
+	Chicago: Univ.\ of Chicago Press.
+	\textsc{lcccn} PM1745.M3.
+	\textsc{hdl} \HDLlink{2027/mdp.39015030695996}.
+\end{enumerate}
+
+\subsubsection{Kato}\label{sec:kato}
+
+\begin{enumerate}
+\item	Goddard, Pliny Earle.
+	1909.
+	\textit{Kato texts}.
+	Pp.\ 65–238 in University of California Publications in American Archaeology
+		and Ethnology vol.\ 5, no.\ 3.
+	173 pp.
+	Berkeley: Univ.\ of California Press.
+	\textsc{lcccn} E51.C15 vol.\ 5, no.\ 3.
+\item	Goddard, Pliny Earle.
+	1912.
+	\textit{Elements of the Kato language}.
+	Pp.\ 1–176 in University of California Publications in American Archaeology
+		and Ethnology vol.\ 11, no.\ 1.
+	176 pp.
+	Berkeley: Univ.\ of California Press.
+	\textsc{lcccn} E51.C15 vol.\ 11, no.\ 1.
+\end{enumerate}
+
+
+%%%
+%%% Eastern
+%%%
+\section{Eastern Dene}\label{sec:eastern}
+
+\subsection{Mackenzie}\label{sec:eastern-mackenzie}
+
+\subsubsection{North Slavey (Hare)}\label{sec:northslavey}
+
+\subsubsection{Mountain}\label{sec:mountain}
+
+\subsubsection{Bearlake}\label{sec:bearlake}
+
+\subsubsection{(South) Slavey}\label{sec:southslavey}
+
+\subsubsection{Tłįchǫ (Dogrib)}\label{sec:tlicho}
+
+\subsection{Central}\label{sec:eastern-central}
+
+\subsubsection{Dane-Ẕaa (Beaver)}\label{sec:beaver}
+
+\subsubsection{Dëne Sųłiné (Chipewyan)}\label{sec:chipewyan}
+
+\begin{enumerate}
+\item	Goddard, Pliny Earle.
+	1912a.
+	Chipewyan texts.
+	In \textit{American Museum of Natural History Anthropological Papers}, vol.\ 10
+	part 1, pp. 1–65.
+	65 pp.
+	\textsc{hdl} \HDLlink{2246/285}.
+	\begin{itemize}
+	\item	Sixteen narratives collected 28 June through 15 July 1911 at Cold Lake
+		Reserve, Alberta.
+		Most are from Jean Baptiste Ennou.
+		Phonetic transcription lacking tone.
+		Interlinear glosses without morpheme segmentation.
+		Description of transcription includes equivalents used by Fr.\ 
+		Laurent Le Goff.
+	\end{itemize}
+\item	Goddard, Pliny Earle.
+	1912b.
+	Analysis of Cold Lake dialect, Chipewyan.
+	In \textit{American Museum of Natural History Anthropological Papers}, vol.\ 10
+	part 2, pp. 68–170.
+	102 pp.
+	\textsc{hdl} \HDLlink{2246/285}.
+	\begin{itemize}
+	\item	Grammar based on data in Goddard 1912a as well as some early instrumental
+		phonetic measurements using a kymograph.
+		Description of phoneme inventory, stress, pitch (though tone is not indicated
+		in transcriptions), phonological assimilation, and cognate comparison with
+		Hupa, Kato, Jicarilla Apache, and Navajo.
+		Morphology description covers nouns, pronouns, numerals, adverbs, conjunctions,
+		postpositions, verbs, and adjectives.
+	\end{itemize}
+\item	Li, Fang-Kuei.
+	1933a.
+	A list of Chipewyan stems.
+	\textit{IJAL} 7.3/4: 122–151.
+	29 pp.
+	\textsc{Jstor} \JSTORlink{1262947}.
+	\begin{itemize}
+	\item	List of stems for nouns, verbs, pronouns, postpositions, particles, and suffixes
+		as attested in Li’s texts from François Mandeville in 1928
+		(Li 1964; Li \&\ Scollon 1976).
+		Includes discussion of phoneme inventory, tone, and verb morphology including
+		verb stem variation.
+	\end{itemize}
+\item	Li, Fang-Kuei.
+	1933b.
+	Chipewyan consonants.
+	\textit{Bulletins of the Institute of History and Philology of the Academica Sinica,
+		Tsʼai Yuan Pʼei Anniversary Volume},
+		supplementary vol.\ 1, pp.\ 429–467.
+	38 pp.
+	Taipei: Academia Sinica.
+	\textsc{anla} \ANLAlink{CA927L1933}.
+	\begin{itemize}
+	\item	Description and analysis of consonants, including distribution in stem
+		syllables and prefixes.
+		Comparison with other Dene languages and reconstruction of PD forms.
+		Data from from François Mandeville in 1928 (Li 1964; Li \&\ Scollon
+		1976).
+	\end{itemize}
+\item	Li, Fang-Kuei.
+	1946.
+	Chipewyan.
+	In \textit{Linguistic structures of Native America}, Harry Hoijer (ed.), pp. 398–423.
+	25 pp.
+	(Viking Fund publications in anthropology vol.\ 6).
+	New York: Viking Fund.
+	\textsc{lcccn} PM201.084 1946.
+\item	Li, Fang-Kuei.
+	1964.
+	A Chipewyan ethnological text.
+	\textsc{IJAL} 30.2: 132–136.
+	4 pp.
+	\textsc{Jstor} \JSTORlink{1263480}.
+	\begin{itemize}
+	\item	Text from François Mandeville at Fort Chipewyan, Alberta, recorded by Li
+		in 1928.
+		English translation, but no interlinear gloss.
+		Includes running discussion of individual elements.
+		For other texts see Li \&\ Scollon 1976.
+	\end{itemize}
+\item	Haas, Mary R.
+	1968.
+	Notes on a Chipewyan dialect
+	\textit{IJAL} 34.3: 165–175.
+	10 pp.
+	\textsc{Jstor} \JSTORlink{1263561}.
+	\begin{itemize}
+	\item	Short account of data from a speaker of what Haas calls “Yellowknife Chipewyan”,
+		spoken by John Abel.
+		Highlights a \fm{t} > \fm{k} shift that indicates this is probably
+		either a Łutsëlkʼé or Fort Smith variety (Cook 2004: 23).
+		Discusses sound system, classificatory verbs, novel vocabulary, loanwords.
+		Wordlist pp.\ 170–175.
+	\end{itemize}
+\item	Li, Fang-Kuei \&\ Scollon, Ronald.
+	1976.
+	\textit{Chipewyan texts}.
+	viii + 450 pp.
+	(Special publications no.\ 71).
+	Taipei: Academia Sinica.
+	\begin{itemize}
+	\item	Eighteen texts recorded by Li in 1928 from François Mandeville at Fort
+		Chipewyan, Alberta.
+		Basis for Li’s publications on Chipewyan.
+		Transcription has been revised from originals.
+		English translations given, but the original interlinear glosses
+		are omitted.
+		One narrative, “How I Made A Canoe” was omitted because of its previous
+		publication in Li 1964.
+	\end{itemize}
+\item	Cook, Eung-Do.
+	1983.
+	Chipewyan vowels.
+	\textit{IJAL} 49.4: 413–427.
+	14 pp.
+	\textsc{Jstor} \JSTORlink{1265213}.
+\item	Bortolin, Leah.
+	1998.
+	\textit{Aspect and the Chipewyan verb}.
+	xii + 144 pp.
+	Calgary: Univ.\ of Calgary, PhD dissertation.
+	\begin{itemize}
+	\item	Description and analysis of aspect and mode system.
+		Includes summary chapter on phonology and morphosyntax (ch.\ 1),
+		phonology and morphology of the verb (ch.\ 2),
+		aspect and mode system (ch.\ 3),
+		verb theme categories (ch.\ 4),
+		and event type and conjugation patterns (ch.\ 5).
+		Supervised by Eung-Do Cook.
+	\end{itemize}
+\item	Cook, Eung-Do.
+	2004.
+	\textit{A grammar of Dëne Sųłiné (Chipewyan)}.
+	xx + 454 pp.
+	(Memoirs of Algonquian and Iroquoian linguistics no.\ 17).
+	Winnepeg: Algonquian and Iroquoian Linguistics.
+	\textsc{isbn} 0-921064-17-9.
+	\textsc{lcccn} PM850.C21C66 2004.
+\item	Wilhelm, Andrea.
+	2007.
+	\textit{Telicity and durativity: A study of aspect in Dëne Sųłiné (Chipewyan)
+		and German}.
+	xvi + 339 pp.
+	(Studies in linguistics).
+	\textsc{isbn} 0-415-97645-6.
+	\textsc{lcccn} PM850.C2W55 2006.
+\end{enumerate}
+
+\subsubsection{Tsuutʼina (Sarcee)}\label{sec:tsuutina}
+
+The English name \fm{Tsuutʼina} is typically pronounced [\ipa{ˌ(t)su.ˈti.nə}]. It is from Tsuutʼina \FIXME{details}.
+
+Also known as: \textit{Tsúùtʼínà}, Tsu Tʼina, Sarcee, Sarsi.
+
+\begin{enumerate}
+\item	Goddard, Pliny Earle.
+	1915.
+	\textit{Sarsi texts}.
+	Pp.\ 189–277 in University of California Publications in American Archaeology
+		and Ethnology vol.\ 11, no.\ 3.
+	88 pp.
+	Berkeley: Univ.\ of California Press.
+	\textsc{lcccn} E51.C15 vol.\ 11, no.\ 3.
+\item	Li, Fang-Kuei.
+	1930.
+	A study of Sarcee verb-stems.
+	\textit{IJAL} 6.1: 3–27.
+	24 pp.
+	\textsc{Jstor} \JSTORlink{1263332}.
+\item	Cook, Eung-Do.
+	1971a.
+	Morphophonemics of two Sarcee classifiers.
+	\textit{IJAL} 37.3: 152–155.
+	3 pp.
+	\textsc{Jstor} \JSTORlink{1264600}.
+\item	Cook, Eung-Do.
+	1971b.
+	Vowels and tones in Sarcee.
+	\textit{Language} 47.1: 164–179.
+	15 pp.
+	\textsc{doi} \DOIlink{10.2307/412193}.
+	\textsc{Jstor} \JSTORlink{412193}.
+\item	Cook, Eung-Do.
+	1972.
+	\textit{Sarcee verb paradigms}.
+	51 pp.
+	(Mercury Series, Ethnology Division Papers no.\ 2).
+	Ottawa: National Museum of Man.
+	\textsc{lcccn} PM2275.C6.
+\item	Cook, Eung-Do.
+	1984.
+	\textit{A Sarcee grammar}.
+	xii + 304 pp.
+	Vancouver: Univ.\ of British Columbia Press.
+	\textsc{isbn} 0-7748-0200-6.
+	\textsc{lcccn} PM2275.C66 1984.
+\item	Welch, Nicholas.
+	2019.
+	Differential grammaticalization of copulas in Tsúùtʼínà and Tłįchǫ Yatiì.
+	\textit{Diachronica} 36.2: 262–293.
+	31 pp.
+	\textsc{doi} \DOIlink{10.1075/dia.15031.wel}.
+\end{enumerate}
+
+%%%
+%%% Southern
+%%%
+\section{Southern Dene}\label{sec:southern}
+
+\subsection{Plains Apache}\label{sec:plainsapache}
+
+\subsection{Navajo}\label{sec:navajo}
+
+\begin{enumerate}
+\item	McDonough, Joyce.
+	1999.
+	Tone in Navajo
+	\textit{Anthropological Linguistics} 41.4: 503–540.
+	37 pp.
+	\textsc{Jstor} \JSTORlink{30028725}.
+\end{enumerate}
+
+\subsection{Jicarilla Apache}\label{sec:jicarilla}
+
+\subsection{Western Apache}\label{sec:westernapache}
+
+\subsection{Chiricahua Apache}\label{sec:chiricahua}
+
+\subsection{Mescalero Apache}\label{sec:mescalero}
+
+\subsection{Lipan Apache}\label{sec:lipan}
+\end{document}

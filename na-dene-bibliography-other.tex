@@ -1,0 +1,150 @@
+%!TEX root = ./na-dene-bibliography.tex
+%%
+%% Miscellaneous LaTeX packages.
+%%
+
+%% Several packages use up all 16 of LaTeX's \write registers.
+%% This adds more \write registers and a dissertation-draft.mw file.
+\usepackage{morewrites}
+
+%% Microtypographic features.
+%% Only turn this on for final drafts because it slows down compilation.
+%\usepackage[protrusion=true,expansion=false]{microtype}
+
+%% Multiple column environments.
+%%
+%% NOTE: This has nothing to do with multiple column spans in tables. That feature
+%%   is obtained with \multicolumn{<align>}{<text>} and is built into the tabular
+%%   environment from memoir.
+%%
+%% Usage: \begin{multicols}{<num>} ... \columnbreak ... \end{multicols}
+%% The \columnbreak is optional; when absent multicol breaks automatically.
+\usepackage{multicol}
+%% Length of the separation space between columns.
+\setlength{\columnsep}{0ex}
+%% This controls the space that appears before and after an instance of multicols.
+%% The skips from ExPex are ignored in this environment, so this value is identical
+%% with the values of aboveexskip and belowexskip for ExPex.
+\setlength{\multicolsep}{0.5em plus 0.375em minus 0.25em}
+%% By default multicol tries to balance the tops and bottoms of columns, thus
+%% justifying them. We never want this. The default is \flushcolumns.
+\raggedcolumns
+
+%% Tweak the date and time formats.
+\usepackage[UKenglish,cleanlook]{isodate}
+
+%% Control widows and orphans easily.
+\usepackage[all,defaultlines=2]{nowidow}
+
+%% Various symbols in text mode.
+\usepackage{textcomp}
+
+%% Multiple text columns.
+\usepackage{multicol}
+%% Length of the separation space between columns.
+\setlength{\columnsep}{0ex}
+%% Length of the space before and after multicolumns.
+%% This is identical with the values of aboveexskip and belowexskip for ExPex.
+\setlength{\multicolsep}{0.5em plus 0.375em minus 0.25em}
+
+%% Multiple row spanning cells in tables.
+%%
+%% Usage: \multirow{2}{*}{Two rows}
+\usepackage{multirow}
+
+%% Big delimiters for multirow in tables.
+%%
+%% Usage: \ldelim<delimiter>{rows}{width/*}[centred text]
+\usepackage{bigdelim}
+
+%% Fancy list environments.
+%% Fancy list environments.
+\usepackage{enumitem}
+%% No leading between items.
+\setenumerate{noitemsep}
+\setitemize{noitemsep}
+%% Make itemize deeper.
+\renewlist{itemize}{itemize}{7}
+%% Change the labels of items.
+\setlist[itemize,1]{label=•}
+\setlist[itemize,2]{label=–}
+\setlist[itemize,3]{label=⁃}
+\setlist[itemize,4]{label=›}
+\setlist[itemize,5]{label=‣}
+\setlist[itemize,6]{label=⁍}
+\setlist[itemize,7]{label=-}
+%% Make enumerate deeper.
+\renewlist{enumerate}{enumerate}{6}
+%% Change the style of enumerate lists.
+\setlist[enumerate,1]{align=left,leftmargin=*,label*=\arabic*.}
+\setlist[enumerate,2]{align=left,label*=\arabic*.}
+\setlist[enumerate,3]{align=left,label*=\arabic*.}
+\setlist[enumerate,4]{align=left,label*=\arabic*.}
+\setlist[enumerate,5]{align=left,label*=\arabic*.}
+\setlist[enumerate,6]{align=left,label*=\arabic*.}
+%% Inline enumerations for in-paragraph lists like (i) …, (ii) …, and (iii) ….
+\newlist{inlineenum}{enumerate*}{1}
+\setlist*[inlineenum,1]{label={(\roman*)},
+				itemjoin={{, }},
+				itemjoin*={{, and }},
+				afterlabel={~}}
+%% Unnumbered inline lists.
+\newlist{inlinelist}{itemize*}{1}
+\setlist*[inlinelist,1]{label={},
+				itemjoin={{, }},
+				itemjoin*={{, }},
+				afterlabel={}}
+
+
+%% Tabbing.
+%\usepackage{tabto}
+
+%% Make list-like tables that pretend to be made with itemize or enumerate.
+%\usepackage{listliketab}
+
+%% Pretty pictures.
+\usepackage{tikz}
+%\usetikzlibrary{calc}
+%\usetikzlibrary{arrows.meta}
+%\usetikzlibrary{matrix}
+%\usetikzlibrary{decorations.pathreplacing}
+%\usetikzlibrary{decorations.pathmorphing}
+%\usetikzlibrary{backgrounds}
+%\usetikzlibrary{positioning}
+%\usetikzlibrary{shapes.geometric}
+%\usetikzlibrary{shapes.symbols}
+%\usetikzlibrary{shapes.misc}
+%\usetikzlibrary{fit}
+
+% The TikZ calligraphy library has a bug.
+% https://tex.stackexchange.com/questions/429859/tl2018-mactex-and-tikz-calligraphy-library
+% https://github.com/loopspace/spath3/commit/a6a090fcf5cf1ca82d2e3708a66174046dc2140d
+% FIXME: This should go away after CTAN is updated with the commit above.
+%\ExplSyntaxOn
+%\int_zero_new:N \g__prg_map_int 
+%\ExplSyntaxOff
+%\usetikzlibrary{calligraphy}
+
+%% Strikeout.
+\usepackage{tikz-sout}
+
+%% Debugging tool to print LaTeX lengths.
+%%
+%% \printlength{<length>} does what you'd expect.
+%% \uselengthunit{<unit>} sets the output unit, in \{pt, pc, in, mm, cm, bp, dd, cc\}.
+%%   The default unit is pt.
+\usepackage{printlen}
+
+%% TeX logos.
+%%
+%% The values here were determined empirically. They are specific to the Brill font.
+\usepackage{metalogo}
+\setLaTeXa{\scshape a}
+\setlogodrop{0.4375ex}
+\setlogokern{Xe}{-0.125ex}
+\setlogokern{eL}{-0.1875ex}
+\setlogokern{La}{-0.59375ex}
+\setlogokern{aT}{-0.1875ex}
+\setlogokern{Te}{-0.1875ex}
+\setlogokern{eX}{-0.125ex}
+\setlogokern{eT}{-0.1875ex}
